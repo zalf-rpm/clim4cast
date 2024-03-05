@@ -25,6 +25,15 @@
 						0,
 						0
 					],
+					"BaseDaylength": 
+						[
+						  0,
+						  0,
+						  7,
+						  7,
+						  0,
+						  0
+						],
 					"SpecificLeafArea": [
 						0.002,
 						0.0018,

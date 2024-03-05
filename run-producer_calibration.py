@@ -386,6 +386,9 @@ def run_producer(server={"server": None, "port": None}):
                                 ps["cultivar"][pname][3] *= pval
                                 ps["cultivar"][pname][4] *= pval
                                 ps["cultivar"][pname][5] *= pval
+                            elif pname == "BaseDaylength":
+                                ps["cultivar"][pname][2] = pval
+                                ps["cultivar"][pname][3] = pval
                             else:
                                 pname_arr = pname.split("_")
                                 i = None
