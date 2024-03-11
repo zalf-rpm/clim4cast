@@ -214,7 +214,7 @@ def run_calibration(server=None, prod_port=None, cons_port=None):
         #kstop = max number of evolution loops before convergence
         #peps = convergence criterion
         #pcento = percent change allowed in kstop loops before convergence
-        sampler.sample(rep, ngs=len(params)*2, peps=0.001, pcento=0.001)
+        sampler.sample(rep, ngs=len(params)*2, kstop = 500 , peps=0.00001, pcento=0.00001)
 
         #with open(path_to_out_folder + "/spot_setup.out", "a") as _:
         #    _.write(f"{datetime.now()} sampler starts run-cal\n")
