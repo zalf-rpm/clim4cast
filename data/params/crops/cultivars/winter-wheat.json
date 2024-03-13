@@ -60,7 +60,7 @@
   ],
   "CropHeightP1": 6,
   "CropHeightP2": 0.5,
-  "CropSpecificMaxRootingDepth": 1.9,
+  "CropSpecificMaxRootingDepth": 1.7,
   "DaylengthRequirement": [
     [
       0,
@@ -174,12 +174,12 @@
   "RespiratoryStress": 0.54,
   "SpecificLeafArea": [
     [
-      0.0014,
+      0.0015,
       0.0013,
       0.0012,
+      0.0012,
       0.0011,
-      0.0010,
-      0.0010
+      0.0011
     ],
     "ha kg-1"
   ],
