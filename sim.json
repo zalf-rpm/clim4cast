@@ -50,7 +50,8 @@
 				["Year", "LAST"],
 				["Crop", "LAST"],
 				["Precip", "SUM"],
-				["Tavg", "AVG"]
+				["Tavg", "AVG"],
+				["Radiation", "SUM"]
 			]
 		]
 	},
