@@ -50,8 +50,7 @@
 				["Year", "LAST"],
 				["Crop", "LAST"],
 				["Precip", "SUM"],
-				["TempMean", "AVG"],
-				["globrad", "SUM"]
+				["Tavg", "AVG"]
 			]
 		]
 	},
