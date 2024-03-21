@@ -51,7 +51,7 @@
 				["Crop", "LAST"],
 				["Precip", "SUM"],
 				["Tavg", "AVG"],
-				["Srad", "SUM"]
+				["Globrad", "SUM"]
 			]
 		]
 	},
