@@ -49,8 +49,9 @@
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["Precip", "SUM"]
-				
+				["Precip", "SUM"],
+				["TempMean", "AVG"],
+				["globrad", "SUM"]
 			]
 		]
 	},
