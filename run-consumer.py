@@ -72,7 +72,7 @@ def create_output(msg):
     cmcs = list(cm_count_to_vals.keys())
     cmcs.sort()
     last_cmc = cmcs[-1]
-    if "year" not in cm_count_to_vals[last_cmc]:
+    if "Year" not in cm_count_to_vals[last_cmc]:
         cm_count_to_vals.pop(last_cmc)
 
     return cm_count_to_vals
@@ -89,6 +89,7 @@ def write_row_to_grids(row_col_data, row, ncols, header, path_to_output_dir, pat
 
     output_grids = {
         "Yield": {"data": make_dict_nparr(), "cast-to": "float", "digits": 1},
+        "Precip": {"data": make_dict_nparr(), "cast-to": "float", "digits": 1},
     }
     output_keys = list(output_grids.keys())
 

@@ -44,6 +44,13 @@
 				["Crop", "FIRST"],
 				["Yield", "LAST"],
 				["AbBiom", "LAST"]
+			],
+			"yearly", [
+				["CM-count", "LAST"],
+				["Year", "LAST"],
+				["Crop", "LAST"],
+				["Precip", "SUM"]
+				
 			]
 		]
 	},
