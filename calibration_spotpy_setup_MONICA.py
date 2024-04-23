@@ -115,4 +115,4 @@ class spot_setup(object):
         return self.obs_flat_list
 
     def objectivefunction(self, simulation, evaluation):
-        return spotpy.objectivefunctions.rmse(evaluation, simulation)
+        return spotpy.objectivefunctions.unbiased_rmse(evaluation, simulation)
