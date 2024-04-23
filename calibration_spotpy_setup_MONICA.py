@@ -114,5 +114,61 @@ class spot_setup(object):
     def evaluation(self):
         return self.obs_flat_list
 
+
     def objectivefunction(self, simulation, evaluation):
-        return spotpy.objectivefunctions.unbiased_rmse(evaluation, simulation)
+        #return spotpy.objectivefunctions.unbiased_rmse(evaluation, simulation)
+        return unbiased_rmse(evaluation, simulation)
+
+
+# OW Addition
+
+def unbiased_rmse(evaluation, simulation):
+    """
+    Unbiased Root Mean Squared Error
+
+    :evaluation: Observed data to compared with simulation data.
+    :type: list
+
+    :simulation: simulation data to compared with evaluation data
+    :type: list
+
+    :return: Unbiased Root Mean Squared Error
+    :rtype: float
+    """
+    if len(evaluation) == len(simulation) > 0:
+        mse_value = mse(evaluation, simulation)
+        n = len(evaluation)
+        unbiased_rmse = np.sqrt(mse_value * n / (n - 1))
+        return unbiased_rmse
+    else:
+        #logging.warning("evaluation and simulation lists do not have the same length.")
+        return np.nan
+
+def mse(evaluation, simulation):
+    """
+    Mean Squared Error
+
+        .. math::
+
+         MSE=\\frac{1}{N}\\sum_{i=1}^{N}(e_{i}-s_{i})^2
+
+    :evaluation: Observed data to compared with simulation data.
+    :type: list
+
+    :simulation: simulation data to compared with evaluation data
+    :type: list
+
+    :return: Mean Squared Error
+    :rtype: float
+    """
+
+    if len(evaluation) == len(simulation):
+        obs, sim = np.array(evaluation), np.array(simulation)
+        mse = np.nanmean((obs - sim) ** 2)
+        return mse
+    else:
+        #logging.warning(
+        #    "evaluation and simulation lists does not have the same length."
+        #)
+        return np.nan
+
