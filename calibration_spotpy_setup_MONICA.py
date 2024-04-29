@@ -117,12 +117,60 @@ class spot_setup(object):
 
     def objectivefunction(self, simulation, evaluation):
         #return spotpy.objectivefunctions.unbiased_rmse(evaluation, simulation)
-        return unbiased_rmse(evaluation, simulation)
+        return unbiased_rmse_RB(evaluation, simulation)
+
+#RB addition
+
+def calculate_mbe(evaluation, simulation):
+    """
+    Calculate the Mean Bias Error.
+
+    Args:
+    y_true (array-like): True values.
+    y_pred (array-like): Predicted values.
+
+    Returns:
+    float: Mean Bias Error.
+    """
+    return np.mean(simulation - evaluation)
+
+def calculate_rmse(evaluation, simulation):
+    """
+    Calculate the Root Mean Squared Error.
+
+    Args:
+    y_true (array-like): True values.
+    y_pred (array-like): Predicted values.
+
+    Returns:
+    float: RMSE.
+    """
+    mse = np.mean((evaluation - simulation) ** 2)
+    return np.sqrt(mse)
+
+def unbiased_rmse_RB(evaluation, simulation):
+    """
+    Calculate RMSE with prior bias correction.
+
+    Args:
+    y_true (array-like): True values.
+    y_pred (array-like): Predicted values.
+
+    Returns:
+    float: RMSE after bias correction.
+    """
+    mbe = calculate_mbe(evaluation, simulation)
+    y_pred_adjusted = simulation - mbe
+    return calculate_rmse(evaluation, y_pred_adjusted)
+
+
+
+
 
 
 # OW Addition
 
-def unbiased_rmse(evaluation, simulation):
+def unbiased_rmse_OW(evaluation, simulation):
     """
     Unbiased Root Mean Squared Error
 
