@@ -132,7 +132,10 @@ def calculate_mbe(evaluation, simulation):
     Returns:
     float: Mean Bias Error.
     """
-    return np.mean(simulation - evaluation)
+    if len(evaluation) == len(simulation):
+        obs, sim = np.array(evaluation), np.array(simulation)
+        mbe = np.nanmean(obs - sim)
+    return mbe
 
 def mse(evaluation, simulation):
     """
@@ -181,8 +184,8 @@ def calculate_rmse(evaluation, simulation):
     """
     if len(evaluation) == len(simulation) > 0:
         return np.sqrt(mse(evaluation, simulation))
-    else:
-        logging.warning("evaluation and simulation lists do not have the same length.")
+    #else:
+        #logging.warning("evaluation and simulation lists do not have the same length.")
         return np.nan
 
 def unbiased_rmse_RB(evaluation, simulation):
