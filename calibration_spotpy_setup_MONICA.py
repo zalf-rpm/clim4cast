@@ -134,19 +134,56 @@ def calculate_mbe(evaluation, simulation):
     """
     return np.mean(simulation - evaluation)
 
+def mse(evaluation, simulation):
+    """
+    Mean Squared Error
+
+        .. math::
+
+         MSE=\\frac{1}{N}\\sum_{i=1}^{N}(e_{i}-s_{i})^2
+
+    :evaluation: Observed data to compared with simulation data.
+    :type: list
+
+    :simulation: simulation data to compared with evaluation data
+    :type: list
+
+    :return: Mean Squared Error
+    :rtype: float
+    """
+
+    if len(evaluation) == len(simulation):
+        obs, sim = np.array(evaluation), np.array(simulation)
+        mse = np.nanmean((obs - sim) ** 2)
+        return mse
+    else:
+        #logging.warning(
+        #    "evaluation and simulation lists does not have the same length."
+        #)
+        return np.nan
+
 def calculate_rmse(evaluation, simulation):
     """
-    Calculate the Root Mean Squared Error.
+    Root Mean Squared Error
 
-    Args:
-    y_true (array-like): True values.
-    y_pred (array-like): Predicted values.
+        .. math::
 
-    Returns:
-    float: RMSE.
+         RMSE=\\sqrt{\\frac{1}{N}\\sum_{i=1}^{N}(e_{i}-s_{i})^2}
+
+    :evaluation: Observed data to compared with simulation data.
+    :type: list
+
+    :simulation: simulation data to compared with evaluation data
+    :type: list
+
+    :return: Root Mean Squared Error
+    :rtype: float
     """
-    mse = np.mean((evaluation - simulation) ** 2)
-    return np.sqrt(mse)
+    if len(evaluation) == len(simulation) > 0:
+        return np.sqrt(mse(evaluation, simulation))
+    else:
+        logging.warning("evaluation and simulation lists do not have the same length.")
+        return np.nan
 
 def unbiased_rmse_RB(evaluation, simulation):
     """
@@ -159,6 +196,7 @@ def unbiased_rmse_RB(evaluation, simulation):
     Returns:
     float: RMSE after bias correction.
     """
+
     mbe = calculate_mbe(evaluation, simulation)
     y_pred_adjusted = simulation - mbe
     return calculate_rmse(evaluation, y_pred_adjusted)
