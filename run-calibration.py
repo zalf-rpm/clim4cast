@@ -14,6 +14,8 @@ import subprocess as sp
 import sys
 import time
 import uuid
+import pandas as pd
+import seaborn as sns
 
 import calibration_spotpy_setup_MONICA
 
@@ -286,6 +288,23 @@ def run_calibration(server=None, prod_port=None, cons_port=None):
         plt.xlabel("Iteration")
         fig.savefig(f"{path_to_out_folder}/{nuts3_region_folder_name}_SCEUA_objectivefunctiontrace_MONICA.png", dpi=150)
         plt.close(fig)
+
+        # OW addition
+        df = pd.read_csv (f"{path_to_out_folder}/{nuts3_region_folder_name}_SCEUA_monica_results")
+        columns_of_interest = ['like1','parSpecificLeafArea', 'parMaxAssimilationRate', 'parDaylengthRequirement', 'parBaseDaylength', 'parCropSpecificMaxRootingDepth']
+        df_selected = df[columns_of_interest]
+        lowest_like1_values = df_selected.nsmallest(100, 'like1')['like1']
+        df_lowest_like1 = df_selected[df_selected['like1'].isin(lowest_like1_values)]
+
+        # Drop the 'like1' column from the DataFrame as it's no longer needed for plotting
+        df_lowest_like1 = df_lowest_like1.drop(columns=['like1'])
+
+        # Drop any non-numeric columns (like 'chain') before creating the pair plot
+        df_lowest_like1_numeric = df_lowest_like1.select_dtypes(include='number')
+        fig1 = sns.pairplot(df_lowest_like1_numeric)
+        fig1.savefig(f"{path_to_out_folder}/{nuts3_region_folder_name}_SCEUA_pair_MONICA.png", dpi=150)
+
+
 
         del results
     # kill the two channels and the producer and consumer
