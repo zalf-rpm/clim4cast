@@ -291,7 +291,7 @@ def run_calibration(server=None, prod_port=None, cons_port=None):
 
         # OW addition
         df = pd.read_csv (f"{path_to_out_folder}/{nuts3_region_folder_name}_SCEUA_monica_results")
-        columns_of_interest = ['like1','parSpecificLeafArea', 'parMaxAssimilationRate', 'parDaylengthRequirement', 'parBaseDaylength', 'parCropSpecificMaxRootingDepth']
+        columns_of_interest = ['like1','parSpecificLeafArea', 'parMaxAssimilationRate', 'parDaylengthRequirement', 'parBaseDaylength', 'parCropSpecificMaxRootingDepth', 'parVernalisationRequirement']
         df_selected = df[columns_of_interest]
         lowest_like1_values = df_selected.nsmallest(100, 'like1')['like1']
         df_lowest_like1 = df_selected[df_selected['like1'].isin(lowest_like1_values)]
