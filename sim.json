@@ -50,86 +50,87 @@
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["Mois", [1,5], "AVG"]
+				["Mois|Mois_S1", [1,5, "AVG"], "AVG"]
 			],
 
 			{"while": ["Stage", "=", 2]},[
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["Mois", [1,5], "AVG"]
+				["Mois|Mois_S2", [1,5, "AVG"], "AVG"]
 			],
 
 			{"while": ["Stage", "=", 3]},[
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["Mois", [1,5], "AVG"]
+				["Mois|Mois_S3", [1,5, "AVG"], "AVG"]
 			],
 
 			{"while": ["Stage", "=", 4]},[
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["Mois", [1,5], "AVG"]
+				["Mois|Mois_S4", [1,5, "AVG"], "AVG"]
 			],
 
 			{"while": ["Stage", "=", 5]},[
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["Mois", [1,5], "AVG"]
+				["Mois|Mois_S5", [1,5, "AVG"], "AVG"]
 			],		
 			
 			{"while": ["Stage", "=", 6]},[
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["Mois", [1,5], "AVG"]
+				["Mois|Mois_S6", [1,5, "AVG"], "AVG"]
 			],			
+
+
 
 			{"while": ["Stage", "=", 1]},[
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["WaterContent", [1,5], "AVG"]
+				["AbBiom|AbBiom_S1", "LAST"]
 			],
 
 			{"while": ["Stage", "=", 2]},[
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["WaterContent", [1,5], "AVG"]
+				["AbBiom|AbBiom_S2", "LAST"]
 			],
 
 			{"while": ["Stage", "=", 3]},[
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["WaterContent", [1,5], "AVG"]
+				["AbBiom|AbBiom_S3", "LAST"]
 			],
 
 			{"while": ["Stage", "=", 4]},[
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["WaterContent", [1,5], "AVG"]
+				["AbBiom|AbBiom_S4", "LAST"]
 			],
 
 			{"while": ["Stage", "=", 5]},[
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["WaterContent", [1,5], "AVG"]
+				["AbBiom|AbBiom_S5", "LAST"]
 			],		
 			
 			{"while": ["Stage", "=", 6]},[
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["WaterContent", [1,5], "AVG"]
-			],	
-
+				["AbBiom|AbBiom_S6", "LAST"]
+			],						
 
 
 

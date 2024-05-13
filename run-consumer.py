@@ -90,13 +90,21 @@ def write_row_to_grids(row_col_data, row, ncols, header, path_to_output_dir, pat
     output_grids = {
         "Yield": {"data": make_dict_nparr(), "cast-to": "float", "digits": 1},
         "AbBiom": {"data": make_dict_nparr(), "cast-to": "float", "digits": 1},
-        "HeatRed": {"data": make_dict_nparr(), "cast-to": "float", "digits": 1},
-        "FrostRed": {"data": make_dict_nparr(), "cast-to": "float", "digits": 1},
-        "Nstress": {"data": make_dict_nparr(), "cast-to": "float", "digits": 1},
-        "Mois_1": {"data": make_dict_nparr(), "cast-to": "float", "digits": 1},
-        "Mois_5": {"data": make_dict_nparr(), "cast-to": "float", "digits": 1},
-        "WaterContent_1": {"data": make_dict_nparr(), "cast-to": "float", "digits": 1},
-        "WaterContent_5": {"data": make_dict_nparr(), "cast-to": "float", "digits": 1},
+        #"HeatRed": {"data": make_dict_nparr(), "cast-to": "float", "digits": 1},
+        #"FrostRed": {"data": make_dict_nparr(), "cast-to": "float", "digits": 1},
+        #"Nstress": {"data": make_dict_nparr(), "cast-to": "float", "digits": 1},
+        "Mois_S1": {"data": make_dict_nparr(), "cast-to": "float", "digits": 1},
+        "Mois_S2": {"data": make_dict_nparr(), "cast-to": "float", "digits": 1},
+        "Mois_S3": {"data": make_dict_nparr(), "cast-to": "float", "digits": 1},
+        "Mois_S4": {"data": make_dict_nparr(), "cast-to": "float", "digits": 1},
+        "Mois_S5": {"data": make_dict_nparr(), "cast-to": "float", "digits": 1},
+        "Mois_S6": {"data": make_dict_nparr(), "cast-to": "float", "digits": 1},
+        "AbBiom_S1": {"data": make_dict_nparr(), "cast-to": "float", "digits": 1},
+        "AbBiom_S2": {"data": make_dict_nparr(), "cast-to": "float", "digits": 1},
+        "AbBiom_S3": {"data": make_dict_nparr(), "cast-to": "float", "digits": 1},
+        "AbBiom_S4": {"data": make_dict_nparr(), "cast-to": "float", "digits": 1},
+        "AbBiom_S5": {"data": make_dict_nparr(), "cast-to": "float", "digits": 1},
+        "AbBiom_S6": {"data": make_dict_nparr(), "cast-to": "float", "digits": 1}
     }
     output_keys = list(output_grids.keys())
 
