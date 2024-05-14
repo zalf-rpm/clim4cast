@@ -290,11 +290,7 @@ def run_calibration(server=None, prod_port=None, cons_port=None):
         plt.close(fig)
 
         # OW addition
-<<<<<<< HEAD
         df = pd.read_csv (f"{path_to_out_folder}/{nuts3_region_folder_name}_SCEUA_monica_results.csv")
-=======
-        df = pd.read_csv(f"{path_to_out_folder}/{nuts3_region_folder_name}_SCEUA_monica_results.csv")
->>>>>>> 568a8b6880f8d4d8d7b28486232eda5505f8c6e9
         columns_of_interest = ['like1','parSpecificLeafArea', 'parMaxAssimilationRate', 'parDaylengthRequirement', 'parBaseDaylength', 'parCropSpecificMaxRootingDepth', 'parVernalisationRequirement']
         df_selected = df[columns_of_interest]
         lowest_like1_values = df_selected.nsmallest(100, 'like1')['like1']
