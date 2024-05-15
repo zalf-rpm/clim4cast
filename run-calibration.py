@@ -303,6 +303,9 @@ def run_calibration(server=None, prod_port=None, cons_port=None):
         df_lowest_like1_numeric = df_lowest_like1.select_dtypes(include='number')
         fig1 = sns.pairplot(df_lowest_like1_numeric)
         fig1.savefig(f"{path_to_out_folder}/{nuts3_region_folder_name}_SCEUA_pair_MONICA.png", dpi=150)
+        plt.close(fig1)
+        
+
 
 
 
