@@ -116,8 +116,8 @@ class spot_setup(object):
 
 
     def objectivefunction(self, simulation, evaluation):
-        #return spotpy.objectivefunctions.unbiased_rmse(evaluation, simulation)
-        return unbiased_rmse_RB(evaluation, simulation)
+        return spotpy.objectivefunctions.unbiased_rmse(evaluation, simulation)
+        #return unbiased_rmse_RB(evaluation, simulation)
 
 #RB addition
 
