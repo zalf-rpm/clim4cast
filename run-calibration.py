@@ -216,7 +216,7 @@ def run_calibration(server=None, prod_port=None, cons_port=None):
         #kstop = max number of evolution loops before convergence
         #peps = convergence criterion
         #pcento = percent change allowed in kstop loops before convergence
-        sampler.sample(rep, ngs=len(params)*2, kstop = 500 , peps=0.00001, pcento=0.00001)
+        sampler.sample(rep, ngs=len(params)*2+1, kstop = 100 , peps=0.0001, pcento=0.0001)
 
         #with open(path_to_out_folder + "/spot_setup.out", "a") as _:
         #    _.write(f"{datetime.now()} sampler starts run-cal\n")
@@ -284,7 +284,7 @@ def run_calibration(server=None, prod_port=None, cons_port=None):
         #plt.plot(results["like1"],  marker='o')
         plt.plot(results["like1"], "r+")
         plt.show()
-        plt.ylabel("RMSE")
+        plt.ylabel("unbiased_RMSE")
         plt.xlabel("Iteration")
         fig.savefig(f"{path_to_out_folder}/{nuts3_region_folder_name}_SCEUA_objectivefunctiontrace_MONICA.png", dpi=150)
         plt.close(fig)
