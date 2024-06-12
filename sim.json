@@ -253,37 +253,37 @@
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["Pwp|Pwp_S1", "AVG"]
+				["Pwp|Pwp_S1",[1,10, "AVG"], "AVG"]
 			],
 			{"while": ["Stage", "=", 2]},[
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["Pwp|Pwp_S2", "AVG"]
+				["Pwp|Pwp_S2",[1,10, "AVG"],  "AVG"]
 			],
 			{"while": ["Stage", "=", 3]},[
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["Pwp|Pwp_S3", "AVG"]
+				["Pwp|Pwp_S3",[1,10, "AVG"],  "AVG"]
 			],
 			{"while": ["Stage", "=", 4]},[
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["Pwp|Pwp_S4", "AVG"]
+				["Pwp|Pwp_S4",[1,10, "AVG"],  "AVG"]
 			],
 			{"while": ["Stage", "=", 5]},[
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["Pwp|Pwp_S5", "AVG"]
+				["Pwp|Pwp_S5",[1,10, "AVG"],  "AVG"]
 			],
 			{"while": ["Stage", "=", 6]},[
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["Pwp|Pwp_S6", "AVG"]
+				["Pwp|Pwp_S6",[1,10, "AVG"],  "AVG"]
 			],
 
 
@@ -291,37 +291,37 @@
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["Fc|Fc_S1", "AVG"]
+				["Fc|Fc_S1",[1,10, "AVG"],  "AVG"]
 			],
 			{"while": ["Stage", "=", 2]},[
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["Fc|Fc_S2", "AVG"]
+				["Fc|Fc_S2",[1,10, "AVG"],  "AVG"]
 			],
 			{"while": ["Stage", "=", 3]},[
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["Fc|Fc_S3", "AVG"]
+				["Fc|Fc_S3",[1,10, "AVG"],  "AVG"]
 			],
 			{"while": ["Stage", "=", 4]},[
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["Fc|Fc_S4", "AVG"]
+				["Fc|Fc_S4",[1,10, "AVG"],  "AVG"]
 			],
 			{"while": ["Stage", "=", 5]},[
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["Fc|Fc_S5", "AVG"]
+				["Fc|Fc_S5",[1,10, "AVG"],  "AVG"]
 			],
 			{"while": ["Stage", "=", 6]},[
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["Fc|Fc_S6", "AVG"]
+				["Fc|Fc_S6",[1,10, "AVG"],  "AVG"]
 			],
 
 
@@ -329,37 +329,37 @@
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["PASW|PASW_S1", "AVG"]
+				["PASW|PASW_S1",[1,10, "AVG"],  "AVG"]
 			],
 			{"while": ["Stage", "=", 2]},[
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["PASW|PASW_S2", "AVG"]
+				["PASW|PASW_S2",[1,10, "AVG"],  "AVG"]
 			],
 			{"while": ["Stage", "=", 3]},[
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["PASW|PASW_S3", "AVG"]
+				["PASW|PASW_S3",[1,10, "AVG"],  "AVG"]
 			],
 			{"while": ["Stage", "=", 4]},[
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["PASW|PASW_S4", "AVG"]
+				["PASW|PASW_S4",[1,10, "AVG"],  "AVG"]
 			],
 			{"while": ["Stage", "=", 5]},[
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["PASW|PASW_S5", "AVG"]
+				["PASW|PASW_S5",[1,10, "AVG"],  "AVG"]
 			],
 			{"while": ["Stage", "=", 6]},[
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["PASW|PASW_S6", "AVG"]
+				["PASW|PASW_S6",[1,10, "AVG"],  "AVG"]
 			],
 
 
@@ -369,37 +369,37 @@
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["rootingZone|rootingZone_S1", "LAST"]
+				["rootingZone|rootingZone_S1",[1,20, "LAST"],  "LAST"]
 			],
 			{"while": ["Stage", "=", 2]},[
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["rootingZone|rootingZone_S2", "LAST"]
+				["rootingZone|rootingZone_S2",[1,20, "LAST"], "LAST"]
 			],
 			{"while": ["Stage", "=", 3]},[
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["rootingZone|rootingZone_S3", "LAST"]
+				["rootingZone|rootingZone_S3",[1,20, "LAST"], "LAST"]
 			],
 			{"while": ["Stage", "=", 4]},[
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["rootingZone|rootingZone_S4", "LAST"]
+				["rootingZone|rootingZone_S4",[1,20, "LAST"], "LAST"]
 			],
 			{"while": ["Stage", "=", 5]},[
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["rootingZone|rootingZone_S5", "LAST"]
+				["rootingZone|rootingZone_S5",[1,20, "LAST"], "LAST"]
 			],
 			{"while": ["Stage", "=", 6]},[
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["rootingZone|rootingZone_S6", "LAST"]
+				["rootingZone|rootingZone_S6",[1,20, "LAST"], "LAST"]
 			],
 
 
