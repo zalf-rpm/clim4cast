@@ -37,12 +37,12 @@
 
 		"obj-outputs?": true,
 
-		"events": [
+		"_events": [
 			"Sowing", ["Date"],
 			"Harvest", ["Date"]
 		],
 
-		"_events": [
+		"events": [
 			"crop", [
 				["CM-count", "FIRST"],
 				["Year", "LAST"],
