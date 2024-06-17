@@ -38,6 +38,12 @@
 		"obj-outputs?": true,
 
 		"_events": [
+			"Stage-1", ["Date"],
+			"Stage-2", ["Date"],
+			"Stage-3", ["Date"],
+			"Stage-4", ["Date"],
+			"Stage-5", ["Date"],
+			"Stage-6", ["Date"],
 			"Sowing", ["Date"],
 			"Harvest", ["Date"]
 		],
