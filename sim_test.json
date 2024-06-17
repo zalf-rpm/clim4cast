@@ -1,0 +1,184 @@
+{
+	"__note__": "09/2023 : Version for simulations of historic and current plant growth. There is a different version for historic plant growth because of different headers.",
+	"crop.json": "crop.json",
+	"site.json": "site.json",
+	"climate.csv": "",
+
+	"climate.csv-options": {
+		"_start-date": "1991-01-01",
+        "_end-date": "2017-12-31",
+        "no-of-climate-file-header-lines": 1,
+        "csv-separator": "\t",
+        "header-to-acd-names": {
+			"Date": "iso-date",
+			"TempMin": "tmin",
+			"TempMean": "tavg",
+			"TempMax": "tmax",
+            "Precipitation": "precip",
+            "RelHumCalc": ["relhumid", "*", 100.0],
+			"Radiation": ["globrad", "/", 1000.0],
+			"Windspeed": "wind"
+        }
+    },
+	
+	"debug?": false,
+	"path-to-output": "./",
+	"include-file-base-path": "data/params/",
+	
+	"output": { 
+	  "write-file?": false,
+		"file-name": "out.csv",
+	
+		"csv-options": {
+			"include-header-row": true,
+			"include-units-row": false,
+			"csv-separator": ","
+		},
+
+		"obj-outputs?": true,
+
+		"_events": [
+			"Stage-1", ["Date"],
+			"Stage-2", ["Date"],
+			"Stage-3", ["Date"],
+			"Stage-4", ["Date"],
+			"Stage-5", ["Date"],
+			"Stage-6", ["Date"],
+			"Sowing", ["Date"],
+			"Harvest", ["Date"]
+		],
+
+		"events": [
+			"crop", [
+				["CM-count", "FIRST"],
+				["Year", "LAST"],
+				["Crop", "FIRST"],
+				["Yield", "LAST"],
+				["AbBiom", "LAST"]
+			],
+
+			{"while": ["Stage", "=", 1]},[
+				["CM-count", "LAST"],
+				["Year", "LAST"],
+				["Crop", "LAST"],
+				["Mois|Mois_S1", [1,10, "AVG"], "AVG"],
+				["AbBiom|AbBiom_S1", "LAST"],
+				["HeatRed|HeatRed_S1", "AVG"],
+				["FrostRed|FrostRed_S1", "AVG"],
+				["Nstress|Nstress_S1", "AVG"],
+				["Pwp|Pwp_S1", [1, 10, "AVG"], "AVG"],
+				["Fc|Fc_S1", [1, 10, "AVG"], "AVG"],
+				["PASW|PASW_S1", [1, 10, "AVG"], "AVG"],
+				["rootingZone|rootingZone_S1", [1, 20, "LAST"], "LAST"]
+			],
+
+			{"while": ["Stage", "=", 2]},[
+				["CM-count", "LAST"],
+				["Year", "LAST"],
+				["Crop", "LAST"],
+				["Mois|Mois_S2", [1,10, "AVG"], "AVG"],
+				["AbBiom|AbBiom_S2", "LAST"],
+				["HeatRed|HeatRed_S2", "AVG"],
+				["FrostRed|FrostRed_S2", "AVG"],
+				["Nstress|Nstress_S2", "AVG"],
+				["Pwp|Pwp_S2", [1, 10, "AVG"], "AVG"],
+				["Fc|Fc_S2", [1, 10, "AVG"], "AVG"],
+				["PASW|PASW_S2", [1, 10, "AVG"], "AVG"],
+				["rootingZone|rootingZone_S2", [1, 20, "LAST"], "LAST"]
+			],
+
+			{"while": ["Stage", "=", 3]},[
+				["CM-count", "LAST"],
+				["Year", "LAST"],
+				["Crop", "LAST"],
+				["Mois|Mois_S3", [1,10, "AVG"], "AVG"],
+				["AbBiom|AbBiom_S3", "LAST"],
+				["HeatRed|HeatRed_S3", "AVG"],
+				["FrostRed|FrostRed_S3", "AVG"],
+				["Nstress|Nstress_S3", "AVG"],
+				["Pwp|Pwp_S3", [1, 10, "AVG"], "AVG"],
+				["Fc|Fc_S3", [1, 10, "AVG"], "AVG"],
+				["PASW|PASW_S3", [1, 10, "AVG"], "AVG"],
+				["rootingZone|rootingZone_S3", [1, 20, "LAST"], "LAST"]
+			],
+
+			{"while": ["Stage", "=", 4]},[
+				["CM-count", "LAST"],
+				["Year", "LAST"],
+				["Crop", "LAST"],
+				["Mois|Mois_S4", [1,10, "AVG"], "AVG"],
+				["AbBiom|AbBiom_S4", "LAST"],
+				["HeatRed|HeatRed_S4", "AVG"],
+				["FrostRed|FrostRed_S4", "AVG"],
+				["Nstress|Nstress_S4", "AVG"],
+				["Pwp|Pwp_S4", [1, 10, "AVG"], "AVG"],
+				["Fc|Fc_S4", [1, 10, "AVG"], "AVG"],
+				["PASW|PASW_S4", [1, 10, "AVG"], "AVG"],
+				["rootingZone|rootingZone_S4", [1, 20, "LAST"], "LAST"]
+			],
+
+			{"while": ["Stage", "=", 5]},[
+				["CM-count", "LAST"],
+				["Year", "LAST"],
+				["Crop", "LAST"],
+				["Mois|Mois_S5", [1,10, "AVG"], "AVG"],
+				["AbBiom|AbBiom_S5", "LAST"],
+				["HeatRed|HeatRed_S5", "AVG"],
+				["FrostRed|FrostRed_S5", "AVG"],
+				["Nstress|Nstress_S5", "AVG"],
+				["Pwp|Pwp_S5", [1, 10, "AVG"], "AVG"],
+				["Fc|Fc_S5", [1, 10, "AVG"], "AVG"],
+				["PASW|PASW_S5", [1, 10, "AVG"], "AVG"],
+				["rootingZone|rootingZone_S5", [1, 20, "LAST"], "LAST"]
+			],
+			
+			{"while": ["Stage", "=", 6]},[
+				["CM-count", "LAST"],
+				["Year", "LAST"],
+				["Crop", "LAST"],
+				["Mois|Mois_S6", [1,10, "AVG"], "AVG"],
+				["AbBiom|AbBiom_S6", "LAST"],
+				["HeatRed|HeatRed_S6", "AVG"],
+				["FrostRed|FrostRed_S6", "AVG"],
+				["Nstress|Nstress_S6", "AVG"],
+				["Pwp|Pwp_S6", [1, 10, "AVG"], "AVG"],
+				["Fc|Fc_S6", [1, 10, "AVG"], "AVG"],
+				["PASW|PASW_S6", [1, 10, "AVG"], "AVG"],
+				["rootingZone|rootingZone_S6", [1, 20, "LAST"], "LAST"]
+			],
+
+			"yearly", [
+				["CM-count", "LAST"],
+				["Year", "LAST"],
+				["Crop", "LAST"],
+				["HeatRed", "AVG"],
+				["FrostRed", "AVG"],
+				["Nstress", "AVG"]
+			]
+		]
+	},
+
+	"NumberOfLayers": 20,
+	"LayerThickness": [0.1, "m"],
+
+	"UseSecondaryYields": false,
+	"NitrogenResponseOn": true,
+	"WaterDeficitResponseOn": true,
+	"EmergenceMoistureControlOn": false,
+	"EmergenceFloodingControlOn": false,
+
+	"UseAutomaticIrrigation": false,
+	"AutoIrrigationParams": {
+		"irrigationParameters": {
+			"nitrateConcentration": [0, "mg dm-3"],
+			"sulfateConcentration": [0, "mg dm-3"]
+		},
+		"amount": [0, "mm"],
+		"threshold": 0.9
+	},
+
+	"UseNMinMineralFertilisingMethod": true,
+	"NMinUserParams": { "min": 40, "max": 120, "delayInDays": 10 },
+	"NMinFertiliserPartition": ["include-from-file", "mineral-fertilisers/AN.json"],
+	"JulianDayAutomaticFertilising": 89
+}
