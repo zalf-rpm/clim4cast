@@ -37,7 +37,7 @@
 
 		"obj-outputs?": true,
 
-		"_events": [
+		"events": [
 			"Stage-1", ["Date"],
 			"Stage-2", ["Date"],
 			"Stage-3", ["Date"],
@@ -48,7 +48,7 @@
 			"Harvest", ["Date"]
 		],
 
-		"events": [
+		"_events": [
 			"crop", [
 				["CM-count", "FIRST"],
 				["Year", "LAST"],
