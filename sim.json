@@ -57,37 +57,37 @@
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["Pwp|Pwp_S1",[1,10, "AVG"], "AVG"]
+				["Pwp|Pwp_S1",[5, "LAST"], "LAST"]
 			],
 			{"while": ["Stage", "=", 2]},[
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["Pwp|Pwp_S2",[1,10, "AVG"],  "AVG"]
+				["Pwp|Pwp_S2",[5, "LAST"], "LAST"]
 			],
 			{"while": ["Stage", "=", 3]},[
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["Pwp|Pwp_S3",[1,10, "AVG"],  "AVG"]
+				["Pwp|Pwp_S3",[5, "LAST"], "LAST"]
 			],
 			{"while": ["Stage", "=", 4]},[
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["Pwp|Pwp_S4",[1,10, "AVG"],  "AVG"]
+				["Pwp|Pwp_S4",[5, "LAST"], "LAST"]
 			],
 			{"while": ["Stage", "=", 5]},[
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["Pwp|Pwp_S5",[1,10, "AVG"],  "AVG"]
+				["Pwp|Pwp_S5",[5, "LAST"], "LAST"]
 			],
 			{"while": ["Stage", "=", 6]},[
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["Pwp|Pwp_S6",[1,10, "AVG"],  "AVG"]
+				["Pwp|Pwp_S6",[5, "LAST"], "LAST"]
 			]
 		],
 
