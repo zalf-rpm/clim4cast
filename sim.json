@@ -37,7 +37,18 @@
 
 		"obj-outputs?": true,
 
+		
 		"events": [
+			"crop", [
+				["CM-count", "FIRST"],
+				["Year", "LAST"],
+				["Crop", "FIRST"],
+				["Yield", "LAST"],
+				["AbBiom", "LAST"]
+			]
+		],
+
+		"__events": [
 			"Stage-1", ["Date"],
 			"Stage-2", ["Date"],
 			"Stage-3", ["Date"],
@@ -412,11 +423,6 @@
 				["Crop", "LAST"],
 				["rootingZone|rootingZone_S6",[1,20, "LAST"], "LAST"]
 			],
-
-
-
-
-
 
 			"yearly", [
 				["CM-count", "LAST"],
