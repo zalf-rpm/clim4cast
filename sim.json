@@ -44,7 +44,50 @@
 				["Year", "LAST"],
 				["Crop", "FIRST"],
 				["Yield", "LAST"],
-				["AbBiom", "LAST"]
+				["AbBiom", "LAST"],
+				["HeatRed", "AVG"],
+				["FrostRed", "AVG"],
+				["Nstress", "AVG"]
+			],
+
+
+
+
+			{"while": ["Stage", "=", 1]},[
+				["CM-count", "LAST"],
+				["Year", "LAST"],
+				["Crop", "LAST"],
+				["Pwp|Pwp_S1",[1,10, "AVG"], "AVG"]
+			],
+			{"while": ["Stage", "=", 2]},[
+				["CM-count", "LAST"],
+				["Year", "LAST"],
+				["Crop", "LAST"],
+				["Pwp|Pwp_S2",[1,10, "AVG"],  "AVG"]
+			],
+			{"while": ["Stage", "=", 3]},[
+				["CM-count", "LAST"],
+				["Year", "LAST"],
+				["Crop", "LAST"],
+				["Pwp|Pwp_S3",[1,10, "AVG"],  "AVG"]
+			],
+			{"while": ["Stage", "=", 4]},[
+				["CM-count", "LAST"],
+				["Year", "LAST"],
+				["Crop", "LAST"],
+				["Pwp|Pwp_S4",[1,10, "AVG"],  "AVG"]
+			],
+			{"while": ["Stage", "=", 5]},[
+				["CM-count", "LAST"],
+				["Year", "LAST"],
+				["Crop", "LAST"],
+				["Pwp|Pwp_S5",[1,10, "AVG"],  "AVG"]
+			],
+			{"while": ["Stage", "=", 6]},[
+				["CM-count", "LAST"],
+				["Year", "LAST"],
+				["Crop", "LAST"],
+				["Pwp|Pwp_S6",[1,10, "AVG"],  "AVG"]
 			]
 		],
 
