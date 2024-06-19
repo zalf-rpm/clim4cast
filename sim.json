@@ -43,11 +43,7 @@
 				["CM-count", "FIRST"],
 				["Year", "LAST"],
 				["Crop", "FIRST"],
-				["Yield", "LAST"],
-				["AbBiom", "LAST"],
-				["HeatRed", "AVG"],
-				["FrostRed", "AVG"],
-				["Nstress", "AVG"]
+				["Yield", "LAST"]
 			],
 
 
@@ -57,19 +53,19 @@
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["Pwp|Pwp_S1",[5, "LAST"], "LAST"]
+				["Pwp|Pwp_S1",[5,5, "LAST"], "LAST"]
 			],
 			{"while": ["Stage", "=", 2]},[
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["Pwp|Pwp_S2",[5, "LAST"], "LAST"]
+				["Pwp|Pwp_S2",[5,5, "LAST"], "LAST"]
 			],
 			{"while": ["Stage", "=", 3]},[
 				["CM-count", "LAST"],
 				["Year", "LAST"],
 				["Crop", "LAST"],
-				["Pwp|Pwp_S3",[5, "LAST"], "LAST"]
+				["Pwp|Pwp_S3",[5,5, "LAST"], "LAST"]
 			],
 			{"while": ["Stage", "=", 4]},[
 				["CM-count", "LAST"],
