@@ -307,6 +307,81 @@
 				["Nstress|Nstress_S6", "AVG"]
 			],
 
+			{"while": ["Stage", "=", 1]},[
+				["CM-count", "LAST"],
+				["Year", "LAST"],
+				["Crop", "LAST"],
+				["OxRed|OxRed_S1", "AVG"]
+			],
+			{"while": ["Stage", "=", 2]},[
+				["CM-count", "LAST"],
+				["Year", "LAST"],
+				["Crop", "LAST"],
+				["OxRed|OxRed_S2", "AVG"]
+			],
+			{"while": ["Stage", "=", 3]},[
+				["CM-count", "LAST"],
+				["Year", "LAST"],
+				["Crop", "LAST"],
+				["OxRed|OxRed_S3", "AVG"]
+			],
+			{"while": ["Stage", "=", 4]},[
+				["CM-count", "LAST"],
+				["Year", "LAST"],
+				["Crop", "LAST"],
+				["OxRed|OxRed_S4", "AVG"]
+			],
+			{"while": ["Stage", "=", 5]},[
+				["CM-count", "LAST"],
+				["Year", "LAST"],
+				["Crop", "LAST"],
+				["OxRed|OxRed_S5", "AVG"]
+			],
+			{"while": ["Stage", "=", 6]},[
+				["CM-count", "LAST"],
+				["Year", "LAST"],
+				["Crop", "LAST"],
+				["OxRed|OxRed_S6", "AVG"]
+			],
+
+
+
+			{"while": ["Stage", "=", 1]},[
+				["CM-count", "LAST"],
+				["Year", "LAST"],
+				["Crop", "LAST"],
+				["ETa/ETc|ETa/ETc_S1", "AVG"]
+			],
+			{"while": ["Stage", "=", 2]},[
+				["CM-count", "LAST"],
+				["Year", "LAST"],
+				["Crop", "LAST"],
+				["ETa/ETc|ETa/ETc_S2", "AVG"]
+			],
+			{"while": ["Stage", "=", 3]},[
+				["CM-count", "LAST"],
+				["Year", "LAST"],
+				["Crop", "LAST"],
+				["ETa/ETc|ETa/ETc_S3", "AVG"]
+			],
+			{"while": ["Stage", "=", 4]},[
+				["CM-count", "LAST"],
+				["Year", "LAST"],
+				["Crop", "LAST"],
+				["ETa/ETc|ETa/ETc_S4", "AVG"]
+			],
+			{"while": ["Stage", "=", 5]},[
+				["CM-count", "LAST"],
+				["Year", "LAST"],
+				["Crop", "LAST"],
+				["ETa/ETc|ETa/ETc_S5", "AVG"]
+			],
+			{"while": ["Stage", "=", 6]},[
+				["CM-count", "LAST"],
+				["Year", "LAST"],
+				["Crop", "LAST"],
+				["ETa/ETc|ETa/ETc_S6", "AVG"]
+			],
 
 
 
