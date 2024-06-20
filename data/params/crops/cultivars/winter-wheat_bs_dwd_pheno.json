@@ -46,8 +46,8 @@
     [
       0,
       0,
-      6,
-      6,
+      5,
+      5,
       0,
       0
     ],
@@ -63,7 +63,7 @@
   ],
   "CropHeightP1": 6,
   "CropHeightP2": 0.5,
-  "CropSpecificMaxRootingDepth": 1.7,
+  "CropSpecificMaxRootingDepth": 1.9,
   "DaylengthRequirement": [
     [
       0,
@@ -177,12 +177,12 @@
   "RespiratoryStress": 0.54,
   "SpecificLeafArea": [
     [
-      0.0015,
-      0.0013,
-      0.0012,
-      0.0012,
-      0.0011,
-      0.0011
+      0.0025,
+      0.0028,
+      0.0024,
+      0.0024,
+      0.0022,
+      0.0022
     ],
     "ha kg-1"
   ],
@@ -210,7 +210,7 @@
   ],
   "VernalisationRequirement": [
     0,
-    50,
+    72,
     0,
     0,
     0,
