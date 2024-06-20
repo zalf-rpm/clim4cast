@@ -38,7 +38,7 @@
 		"obj-outputs?": true,
 
 
-		"events": [
+		"___events": [
 			"crop", [
 				["CM-count", "FIRST"],
 				["Year", "LAST"],
@@ -113,7 +113,7 @@
 			"Harvest", ["Date"]
 		],
 
-		"__events": [
+		"events": [
 			"crop", [
 				["CM-count", "FIRST"],
 				["Year", "LAST"],
