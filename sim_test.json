@@ -37,6 +37,71 @@
 
 		"obj-outputs?": true,
 
+
+		"events": [
+			"crop", [
+				["CM-count", "FIRST"],
+				["Year", "LAST"],
+				["Crop", "FIRST"],
+				["Yield", "LAST"],
+				["AbBiom", "LAST"]
+			],
+			{"while": ["Stage", "=", 6]},[
+				["CM-count", "LAST"],
+				["Year", "LAST"],
+				["Crop", "LAST"],
+				["AbBiom|AbBiom_S6", "LAST"],
+				["OxRed|OxRed_S6", "AVG"],
+				["Nstress|Nstress_S6", "AVG"],
+				["ETa/ETc|ETa/ETc_S6", "AVG"]
+			],
+			{"while": ["Stage", "=", 5]},[
+				["CM-count", "LAST"],
+				["Year", "LAST"],
+				["Crop", "LAST"],
+				["AbBiom|AbBiom_S5", "LAST"],
+				["OxRed|OxRed_S5", "AVG"],
+				["Nstress|Nstress_S5", "AVG"],
+				["ETa/ETc|ETa/ETc_S5", "AVG"]
+			],
+			{"while": ["Stage", "=", 4]},[
+				["CM-count", "LAST"],
+				["Year", "LAST"],
+				["Crop", "LAST"],
+				["AbBiom|AbBiom_S4", "LAST"],
+				["OxRed|OxRed_S4", "AVG"],
+				["Nstress|Nstress_S4", "AVG"],
+				["ETa/ETc|ETa/ETc_S4", "AVG"]
+			],
+			{"while": ["Stage", "=", 3]},[
+				["CM-count", "LAST"],
+				["Year", "LAST"],
+				["Crop", "LAST"],
+				["AbBiom|AbBiom_S3", "LAST"],
+				["OxRed|OxRed_S3", "AVG"],
+				["Nstress|Nstress_S3", "AVG"],
+				["ETa/ETc|ETa/ETc_S3", "AVG"]
+			],
+			{"while": ["Stage", "=", 2]},[
+				["CM-count", "LAST"],
+				["Year", "LAST"],
+				["Crop", "LAST"],
+				["AbBiom|AbBiom_S2", "LAST"],
+				["OxRed|OxRed_S2", "AVG"],
+				["Nstress|Nstress_S2", "AVG"],
+				["ETa/ETc|ETa/ETc_S2", "AVG"]
+			],
+			{"while": ["Stage", "=", 1]},[
+				["CM-count", "LAST"],
+				["Year", "LAST"],
+				["Crop", "LAST"],
+				["AbBiom|AbBiom_S1", "LAST"],
+				["OxRed|OxRed_S1", "AVG"],
+				["Nstress|Nstress_S1", "AVG"],
+				["ETa/ETc|ETa/ETc_S1", "AVG"]
+			]
+		],
+
 		"_events": [
 			"Stage-1", ["Date"],
 			"Stage-2", ["Date"],
@@ -48,7 +113,7 @@
 			"Harvest", ["Date"]
 		],
 
-		"events": [
+		"__events": [
 			"crop", [
 				["CM-count", "FIRST"],
 				["Year", "LAST"],
