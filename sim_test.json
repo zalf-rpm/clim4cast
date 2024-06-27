@@ -37,20 +37,18 @@
 
 		"obj-outputs?": true,
 
-
-		
 		"events": [
 			"crop", [
 				["CM-count", "FIRST"],
 				["Year", "LAST"],
 				["Crop", "FIRST"],
-				["Yield", "LAST"],
-				["AbBiom", "LAST"]
+				["Yield", "LAST"]
 			],
 
-			"daily", 
-				["Mois", [1,10, "AVG"]]
+			"daily", [
+				["Mois", [1, 10, "AVG"]]
 		]
+	],
 
 		"+events": [
 			"crop", [
