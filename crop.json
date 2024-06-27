@@ -104,7 +104,7 @@
 				{ 
 					"type": "AutomaticHarvest", 
 					"latest-date": "0001-09-05",
-					"min-%-asw": 10,
+					"min-%-asw": 10, 
 					"max-%-asw": 99.0,
 					"max-3d-precip-sum": 2,
 					"max-curr-day-precip": 0.1,
