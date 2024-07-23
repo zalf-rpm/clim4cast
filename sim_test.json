@@ -38,9 +38,30 @@
 		"obj-outputs?": true,
 
 		"events": [
-			"daily", [["Year", "LAST"],
-				["Mois", [1, 10, "AVG"]]
-		]
+			"crop", [
+				["CM-count", "FIRST"],
+				["Year", "LAST"],
+				["Crop", "FIRST"],
+				["Yield", "LAST"],
+				["AbBiom", "LAST"]
+		],
+		{"while": ["Stage", "=", 6]},[
+			["Nstress|Nstress_S6", "AVG"]],
+
+		{"while": ["Stage", "=", 5]},[
+			["Nstress|Nstress_S5", "AVG"]],
+
+		{"while": ["Stage", "=", 4]},[
+			["Nstress|Nstress_S4", "AVG"]],
+
+		{"while": ["Stage", "=", 3]},[
+			["Nstress|Nstress_S3", "AVG"]],
+		
+		{"while": ["Stage", "=", 2]},[
+			["Nstress|Nstress_S2", "AVG"]],
+
+		{"while": ["Stage", "=", 1]},[
+			["Nstress|Nstress_S1", "AVG"]]
 	],
 
 		"+events": [
