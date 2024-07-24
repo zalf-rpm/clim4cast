@@ -79,21 +79,21 @@
 				},
 				{
 					"type": "NDemandFertilization",
-					"date": "0000-11-22",
+					"date": "0001-03-15",
 					"N-demand": [40.0, "kg"],
 					"depth": [0.3, "m"],
 					"partition": ["include-from-file", "mineral-fertilisers/AN.json"]
 				},
 				{
 					"type": "NDemandFertilization",
-					"date": "0001-01-22",
+					"date": "0001-04-15",
 					"N-demand": [80.0, "kg"],
 					"depth": [0.3, "m"],
 					"partition": ["include-from-file", "mineral-fertilisers/AN.json"]
 				},
 				{
 					"type": "NDemandFertilization",
-					"date": "0001-02-22",
+					"date": "0001-05-15",
 					"N-demand": [40.0, "kg"],
 					"depth": [0.3, "m"],
 					"partition": ["include-from-file", "mineral-fertilisers/AN.json"]
