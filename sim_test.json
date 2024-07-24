@@ -37,7 +37,16 @@
 
 		"obj-outputs?": true,
 
+
 		"events": [
+			"daily", [
+				["Year", "LAST"],
+				["AbBiom", "LAST"],
+				"NFert"
+		]
+
+		]
+		"events_": [
 			"crop", [
 				["CM-count", "FIRST"],
 				["Year", "LAST"],
