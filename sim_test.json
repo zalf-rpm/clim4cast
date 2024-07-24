@@ -39,7 +39,7 @@
 
 
 		"events": [
-			"yearly", [
+			"crop", [
 				["Year", "LAST"],
 				["AbBiom", "LAST"],
 				["Yield", "LAST"]
