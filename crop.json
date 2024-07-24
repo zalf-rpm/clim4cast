@@ -87,7 +87,7 @@
 				},
 				{
 					"type": "NDemandFertilization",
-					"days": 120,
+					"days": 70,
 					"after": "Sowing",
 					"N-demand": [80.0, "kg"],
 					"depth": [0.9, "m"],
