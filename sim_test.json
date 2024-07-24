@@ -42,7 +42,7 @@
 			"daily", ["Date",
 				["Year", "LAST"],
 				["AbBiom", "LAST"],
-				"NFert"
+				"NFert", "NH4", "NO3"
 		]
 
 		],
