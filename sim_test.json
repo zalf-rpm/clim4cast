@@ -39,7 +39,7 @@
 
 
 		"events": [
-			"daily", ["Date"
+			"daily", ["Date",
 				["Year", "LAST"],
 				["AbBiom", "LAST"],
 				"NFert"
