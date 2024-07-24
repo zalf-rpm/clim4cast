@@ -78,25 +78,26 @@
 					"date": "0000-09-22", "type": "Sowing", "crop": ["ref", "crops", "WW_dwd"] 
 				},
 				{
-					"type": "MineralFertilization",
+					"type": "NDemandFertilization",
 					"days": 60,
 					"after": "Sowing",
-					"amount": [40.0, "kg"],
+					"N-demand": [40.0, "kg"],
+					"depth": [0.3, "m"],
 					"partition": ["include-from-file", "mineral-fertilisers/AN.json"]
 				},
 				{
-					"type": "MineralFertilization",
+					"type": "NDemandFertilization",
 					"days": 120,
 					"after": "Sowing",
-					"amount": [80.0, "kg"],
+					"N-demand": [80.0, "kg"],
 					"depth": [0.9, "m"],
 					"partition": ["include-from-file", "mineral-fertilisers/AN.json"]
 				},
 				{
-					"type": "MineralFertilization",
+					"type": "NDemandFertilization",
 					"days": 150,
 					"after": "Sowing",
-					"amount": [40.0, "kg"],
+					"N-demand": [40.0, "kg"],
 					"depth": [0.9, "m"],
 					"partition": ["include-from-file", "mineral-fertilisers/AN.json"]
 				},
