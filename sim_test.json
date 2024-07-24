@@ -45,7 +45,7 @@
 				"NFert"
 		]
 
-		]
+		],
 		"events_": [
 			"crop", [
 				["CM-count", "FIRST"],
