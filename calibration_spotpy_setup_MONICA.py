@@ -251,24 +251,10 @@ def calculate_percentage_difference(evaluation, simulation):
     :rtype: list of floats or np.nan if the lengths do not match
     """
     if len(evaluation) == len(simulation) > 0:
-        return [(e - s) / e * 100 for e, s in zip(evaluation, simulation) if e != 0]
+        return [(e - s) / e * 100]
     return np.nan
 
 
-def calculate_rmse(evaluation, simulation):
-    """
-    Root Mean Squared Error
-
-        .. math::
-
-         RMSE=\\sqrt{\\frac{1}{N}\\sum_{i=1}^{N}(e_{i}-s_{i})^2}
-
-    :return: Root Mean Squared Error
-    :rtype: float
-    """
-    if len(evaluation) == len(simulation) > 0:
-        return np.sqrt(np.mean([(e - s) ** 2 for e, s in zip(evaluation, simulation)]))
-    return np.nan
 
 
 
