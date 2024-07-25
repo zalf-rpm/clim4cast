@@ -306,13 +306,10 @@ def run_calibration(server=None, prod_port=None, cons_port=None):
         # plt.close(fig1.fig)
 
 
-    # Calculate percentage differences
-    percentage_differences = calculate_percentage_difference(evaluation, simulation)
 
-    if isinstance(percentage_differences, list):
         # Plot the percentage differences
         fig = plt.figure(1, figsize=(9, 6))
-        plt.plot(percentage_differences, "r+")
+        plt.plot(results["like1"], "r+")
         plt.ylabel("Percentage Difference (%)")
         plt.xlabel("Iteration")
         plt.show()
