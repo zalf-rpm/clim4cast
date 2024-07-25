@@ -317,8 +317,7 @@ def run_calibration(server=None, prod_port=None, cons_port=None):
         # Save the plot
         fig.savefig(f"{path_to_out_folder}/{nuts3_region_folder_name}_SCEUA_percentage_difference_MONICA.png", dpi=150)
         plt.close(fig)
-    else:
-        print("Evaluation and simulation lists do not have the same length.")
+
         
 
 
