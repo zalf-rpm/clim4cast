@@ -251,7 +251,11 @@ def calculate_percentage_difference(evaluation, simulation):
     :rtype: list of floats or np.nan if the lengths do not match
     """
     if len(evaluation) == len(simulation) > 0:
-        return [(e - s) / e * 100]
+        percentage_differences = []
+        for i in range(len(evaluation)):
+            if evaluation[i] != 0:
+                percentage_differences.append((evaluation[i] - simulation[i]) / evaluation[i] * 100)
+        return percentage_differences
     return np.nan
 
 
