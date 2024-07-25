@@ -256,7 +256,9 @@ def calculate_percentage_difference(evaluation, simulation):
             if evaluation[i] != 0:
                 percentage_differences.append((evaluation[i] - simulation[i]) / evaluation[i] * 100)
         return percentage_differences
-    return np.nan
+
+    else:
+        return np.nan
 
 
 
