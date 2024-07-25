@@ -116,10 +116,10 @@ class spot_setup(object):
 
 
     def objectivefunction(self, simulation, evaluation):
-        return spotpy.objectivefunctions.rmse(evaluation, simulation)
-        #return unbiased_rmse_RB(evaluation, simulation)
+        #return spotpy.objectivefunctions.rmse(evaluation, simulation)
+        return calculate_percentage_difference(evaluation, simulation)
 
-#RB addition
+
 
 def calculate_mbe(evaluation, simulation):
     """
@@ -165,28 +165,8 @@ def mse(evaluation, simulation):
         #)
         return np.nan
 
-def calculate_rmse(evaluation, simulation):
-    """
-    Root Mean Squared Error
 
-        .. math::
-
-         RMSE=\\sqrt{\\frac{1}{N}\\sum_{i=1}^{N}(e_{i}-s_{i})^2}
-
-    :evaluation: Observed data to compared with simulation data.
-    :type: list
-
-    :simulation: simulation data to compared with evaluation data
-    :type: list
-
-    :return: Root Mean Squared Error
-    :rtype: float
-    """
-    if len(evaluation) == len(simulation) > 0:
-        return np.sqrt(mse(evaluation, simulation))
-    #else:
-        #logging.warning("evaluation and simulation lists do not have the same length.")
-        return np.nan
+#RB addition
 
 def unbiased_rmse_RB(evaluation, simulation):
     """
@@ -203,10 +183,6 @@ def unbiased_rmse_RB(evaluation, simulation):
     mbe = calculate_mbe(evaluation, simulation)
     y_pred_adjusted = simulation - mbe
     return calculate_rmse(evaluation, y_pred_adjusted)
-
-
-
-
 
 
 # OW Addition
@@ -260,4 +236,40 @@ def mse(evaluation, simulation):
         #    "evaluation and simulation lists does not have the same length."
         #)
         return np.nan
+
+def calculate_percentage_difference(evaluation, simulation):
+    """
+    Calculate the percentage difference between observed (evaluation) and simulated values.
+
+    :evaluation: Observed data to compare with simulation data.
+    :type: list
+
+    :simulation: Simulation data to compare with evaluation data.
+    :type: list
+
+    :return: Percentage difference.
+    :rtype: list of floats or np.nan if the lengths do not match
+    """
+    if len(evaluation) == len(simulation) > 0:
+        return [(e - s) / e * 100 for e, s in zip(evaluation, simulation) if e != 0]
+    return np.nan
+
+
+def calculate_rmse(evaluation, simulation):
+    """
+    Root Mean Squared Error
+
+        .. math::
+
+         RMSE=\\sqrt{\\frac{1}{N}\\sum_{i=1}^{N}(e_{i}-s_{i})^2}
+
+    :return: Root Mean Squared Error
+    :rtype: float
+    """
+    if len(evaluation) == len(simulation) > 0:
+        return np.sqrt(np.mean([(e - s) ** 2 for e, s in zip(evaluation, simulation)]))
+    return np.nan
+
+
+
 
