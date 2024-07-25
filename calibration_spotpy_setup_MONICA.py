@@ -121,6 +121,29 @@ class spot_setup(object):
 
 
 
+
+def calculate_percentage_difference(evaluation, simulation):
+    """
+    Calculate the percentage difference between observed (evaluation) and simulated values.
+
+    :evaluation: Observed data to compare with simulation data.
+    :type: list
+
+    :simulation: Simulation data to compare with evaluation data.
+    :type: list
+
+    :return: Percentage difference.
+    :rtype: list of floats or np.nan if the lengths do not match
+    """
+    if len(evaluation) == len(simulation) > 0:
+        percentage_differences = []
+        for i in range(len(evaluation)):
+            if evaluation[i] != 0:
+                percentage_differences.append((evaluation[i] - simulation[i]) / evaluation[i] * 100)
+        return percentage_differences
+    return np.nan
+
+
 def calculate_mbe(evaluation, simulation):
     """
     Calculate the Mean Bias Error.
@@ -237,26 +260,6 @@ def mse(evaluation, simulation):
         #)
         return np.nan
 
-def calculate_percentage_difference(evaluation, simulation):
-    """
-    Calculate the percentage difference between observed (evaluation) and simulated values.
-
-    :evaluation: Observed data to compare with simulation data.
-    :type: list
-
-    :simulation: Simulation data to compare with evaluation data.
-    :type: list
-
-    :return: Percentage difference.
-    :rtype: list of floats or np.nan if the lengths do not match
-    """
-    if len(evaluation) == len(simulation):
-        obs, sim = np.array(evaluation), np.array(simulation)
-        percentage_differences = ((obs - sim) / obs * 100)
-        return percentage_differences
-
-    else:
-        return np.nan
 
 
 
