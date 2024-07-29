@@ -124,7 +124,7 @@ class spot_setup(object):
 
 def calculate_percentage_difference(evaluation, simulation):
     """
-    Calculate the percentage difference between observed (evaluation) and simulated values.
+    Calculate the absolute percentage difference between observed (evaluation) and simulated values.
 
     :evaluation: Observed data to compare with simulation data.
     :type: list
@@ -132,14 +132,15 @@ def calculate_percentage_difference(evaluation, simulation):
     :simulation: Simulation data to compare with evaluation data.
     :type: list
 
-    :return: Percentage difference.
+    :return: Absolute percentage difference.
     :rtype: list of floats or np.nan if the lengths do not match
     """
     if len(evaluation) == len(simulation) > 0:
         percentage_differences = []
         for i in range(len(evaluation)):
             if evaluation[i] != 0:
-                percentage_differences.append((simulation[i] - evaluation[i]) / evaluation[i] * 100)
+                percentage_difference = abs((evaluation[i] - simulation[i]) / evaluation[i] * 100)
+                percentage_differences.append(percentage_difference)
             else:
                 percentage_differences.append(np.nan)  # Handle division by zero
         return percentage_differences
