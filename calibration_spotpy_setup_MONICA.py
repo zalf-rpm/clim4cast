@@ -139,8 +139,38 @@ def calculate_percentage_difference(evaluation, simulation):
         percentage_differences = []
         for i in range(len(evaluation)):
             if evaluation[i] != 0:
-                percentage_differences.append((evaluation[i] - simulation[i]) / evaluation[i] * 100)
+                percentage_differences.append((simulation[i] - evaluation[i]) / evaluation[i] * 100)
+            else:
+                percentage_differences.append(np.nan)  # Handle division by zero
         return percentage_differences
+    else:
+        logging.warning("evaluation and simulation lists do not have the same length.")
+        return np.nan
+
+
+
+def rmse(evaluation, simulation):
+    """
+    Root Mean Squared Error
+
+        .. math::
+
+         RMSE=\\sqrt{\\frac{1}{N}\\sum_{i=1}^{N}(e_{i}-s_{i})^2}
+
+    :evaluation: Observed data to compared with simulation data.
+    :type: list
+
+    :simulation: simulation data to compared with evaluation data
+    :type: list
+
+    :return: Root Mean Squared Error
+    :rtype: float
+    """
+    if len(evaluation) == len(simulation) > 0:
+        return np.sqrt(mse(evaluation, simulation))
+    else:
+        logging.warning("evaluation and simulation lists do not have the same length.")
+        return np.nan
 
 
 
