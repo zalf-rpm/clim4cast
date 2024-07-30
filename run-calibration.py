@@ -280,14 +280,14 @@ def run_calibration(server=None, prod_port=None, cons_port=None):
         #font = {"family": "calibri",
         #        "weight": "normal",
         #        "size": 18}
-        # fig = plt.figure(1, figsize=(9, 6))
+        fig = plt.figure(1, figsize=(9, 6))
         #plt.plot(results["like1"],  marker='o')
-        # plt.plot(results["like1"], "r+")
-        # plt.show()
-        # plt.ylabel("RMSE")
-        # plt.xlabel("Iteration")
-        # fig.savefig(f"{path_to_out_folder}/{nuts3_region_folder_name}_SCEUA_objectivefunctiontrace_MONICA.png", dpi=150)
-        # plt.close(fig)
+        plt.plot(results["like1"], "r+")
+        plt.show()
+        plt.ylabel("RMSE")
+        plt.xlabel("Iteration")
+        fig.savefig(f"{path_to_out_folder}/{nuts3_region_folder_name}_SCEUA_objectivefunctiontrace_MONICA.png", dpi=150)
+        plt.close(fig)
 
         # OW addition
         # df = pd.read_csv (f"{path_to_out_folder}/{nuts3_region_folder_name}_SCEUA_monica_results.csv")
@@ -301,22 +301,22 @@ def run_calibration(server=None, prod_port=None, cons_port=None):
 
         # Drop any non-numeric columns (like 'chain') before creating the pair plot
         # df_lowest_like1_numeric = df_lowest_like1.select_dtypes(include='number')
-        # fig1 = sns.pairplot(df_lowest_like1_numeric)
-        # fig1.savefig(f"{path_to_out_folder}/{nuts3_region_folder_name}_SCEUA_pair_MONICA.png", dpi=150)
+        #fig1 = sns.pairplot(df_lowest_like1_numeric)
+        #fig1.savefig(f"{path_to_out_folder}/{nuts3_region_folder_name}_SCEUA_pair_MONICA.png", dpi=150)
         # plt.close(fig1.fig)
 
 
 
         # Plot the percentage differences
-        fig = plt.figure(1, figsize=(9, 6))
-        plt.plot(results["like1"], "r+")
-        plt.ylabel("Percentage Difference (%)")
-        plt.xlabel("Iteration")
-        plt.show()
+        #fig = plt.figure(1, figsize=(9, 6))
+        #plt.plot(results["like1"], "r+")
+        #plt.ylabel("Percentage Difference (%)")
+        #plt.xlabel("Iteration")
+        #plt.show()
 
         # Save the plot
-        fig.savefig(f"{path_to_out_folder}/{nuts3_region_folder_name}_SCEUA_percentage_difference_MONICA.png", dpi=150)
-        plt.close(fig)
+        #fig.savefig(f"{path_to_out_folder}/{nuts3_region_folder_name}_SCEUA_percentage_difference_MONICA.png", dpi=150)
+        #plt.close(fig)
 
         
 
