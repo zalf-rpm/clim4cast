@@ -159,32 +159,29 @@
 				},
 				{
 					"type": "NDemandFertilization",
-					"days": 60,
-					"after": "Sowing",
+					"date": "0001-03-15",
 					"N-demand": [40.0, "kg"],
 					"depth": [0.3, "m"],
 					"partition": ["include-from-file", "mineral-fertilisers/AN.json"]
 				},
 				{
 					"type": "NDemandFertilization",
-					"days": 120,
-					"after": "Sowing",
+					"date": "0001-04-15",
 					"N-demand": [80.0, "kg"],
-					"depth": [0.9, "m"],
+					"depth": [0.3, "m"],
 					"partition": ["include-from-file", "mineral-fertilisers/AN.json"]
 				},
 				{
 					"type": "NDemandFertilization",
-					"days": 150,
-					"after": "Sowing",
+					"date": "0001-05-15",
 					"N-demand": [40.0, "kg"],
-					"depth": [0.9, "m"],
+					"depth": [0.3, "m"],
 					"partition": ["include-from-file", "mineral-fertilisers/AN.json"]
 				},
 				{ 
 					"type": "AutomaticHarvest", 
 					"latest-date": "0001-09-05",
-					"min-%-asw": 0,
+					"min-%-asw": 10, 
 					"max-%-asw": 99.0,
 					"max-3d-precip-sum": 2,
 					"max-curr-day-precip": 0.1,
