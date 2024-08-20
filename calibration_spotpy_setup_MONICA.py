@@ -116,8 +116,8 @@ class spot_setup(object):
 
 
     def objectivefunction(self, simulation, evaluation):
-        return spotpy.objectivefunctions.rsr(evaluation, simulation)
-        #return spotpy.objectivefunctions.rmse(evaluation, simulation)
+        #return spotpy.objectivefunctions.rsr(evaluation, simulation)
+        return spotpy.objectivefunctions.rmse(evaluation, simulation)
         #return calculate_percentage_difference(evaluation, simulation)
 
 
