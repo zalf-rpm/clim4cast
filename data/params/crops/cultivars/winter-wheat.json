@@ -1,4 +1,7 @@
 {
+  "metadata": {
+    "description": "Klimertrag parameters. First parameterized on Braunschweig FACE experiment, then phenology adapted to DWD Jahreszaeler observations.",
+    "date": "01-2022"},
   "CultivarName": "winter wheat",
   "WinterCrop": true,
   "AssimilatePartitioningCoeff": [
@@ -60,7 +63,7 @@
   ],
   "CropHeightP1": 6,
   "CropHeightP2": 0.5,
-  "CropSpecificMaxRootingDepth": 1.7,
+  "CropSpecificMaxRootingDepth": 1.9,
   "DaylengthRequirement": [
     [
       0,
@@ -82,7 +85,7 @@
     0.8
   ],
   "EndSensitivePhaseHeatStress": [
-    740,
+    800,
     "°C d"
   ],
   "FrostDehardening": 5.05,
@@ -92,7 +95,7 @@
   "LT50cultivar": -24,
   "LatestHarvestDoy": -1,
   "LowTemperatureExposure": 0.654,
-  "MaxAssimilationRate": 35,
+  "MaxAssimilationRate": 34,
   "MaxCropHeight": [
     0.83,
     "m"
@@ -174,12 +177,12 @@
   "RespiratoryStress": 0.54,
   "SpecificLeafArea": [
     [
+      0.0014,
       0.0015,
       0.0013,
+      0.0013,
       0.0012,
-      0.0012,
-      0.0011,
-      0.0011
+      0.0012
     ],
     "ha kg-1"
   ],
@@ -196,11 +199,11 @@
   ],
   "StageTemperatureSum": [
     [
-      148,
-      284,
-      380,
+      165,
+      250,
+      370,
       180,
-      420,
+      330,
       25
     ],
     "°C d"
