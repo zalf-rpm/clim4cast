@@ -302,8 +302,8 @@ def run_producer(server={"server": None, "port": None}):
                 ## extract crop_id from crop-id name that has possible an extenstion
                 crop_id_short = crop_id.split('_')[0]
 
-                with open(config["path_to_out"] + "/spot_setup.out", "a") as _:
-                    _.write(f"{datetime.now()} setup started producer\n") 
+                #with open(config["path_to_out"] + "/spot_setup.out", "a") as _:
+                #    _.write(f"{datetime.now()} setup started producer\n") 
 
                 #if region_name and len(region_name) > 0:
                     # Create the soil mask for the specific region
@@ -329,8 +329,8 @@ def run_producer(server={"server": None, "port": None}):
                     print("Couldn't read file:", path_harvest)
                     continue
 
-                with open(config["path_to_out"] + "/spot_setup.out", "a") as _:
-                    _.write(f"{datetime.now()} crop added producer\n") 
+                #with open(config["path_to_out"] + "/spot_setup.out", "a") as _:
+                #    _.write(f"{datetime.now()} crop added producer\n") 
 
                 cdict = {}
                 # path to latlon-to-rowcol.json
@@ -341,8 +341,8 @@ def run_producer(server={"server": None, "port": None}):
                                                                                                               soil_crs, cdict)
                 print("created climate_data to gk5 interpolator: ", path)
 
-                with open(config["path_to_out"] + "/spot_setup.out", "a") as _:
-                    _.write(f"{datetime.now()} climate data read producer\n") 
+                #with open(config["path_to_out"] + "/spot_setup.out", "a") as _:
+                #    _.write(f"{datetime.now()} climate data read producer\n") 
 
                 # read template sim.json
                 with open(setup.get("sim.json", config["sim.json"])) as _:
@@ -358,8 +358,8 @@ def run_producer(server={"server": None, "port": None}):
                 with open(setup.get("site.json", config["site.json"])) as _:
                     site_json = json.load(_)
 
-                with open(config["path_to_out"] + "/spot_setup.out", "a") as _:
-                    _.write(f"{datetime.now()} read site and sim json producer\n\n") 
+                #with open(config["path_to_out"] + "/spot_setup.out", "a") as _:
+                #    _.write(f"{datetime.now()} read site and sim json producer\n\n") 
 
                 #site_json["EnvironmentParameters"]["rcp"] = scenario
 
@@ -386,6 +386,9 @@ def run_producer(server={"server": None, "port": None}):
                                 ps["cultivar"][pname][3] *= pval
                                 ps["cultivar"][pname][4] *= pval
                                 ps["cultivar"][pname][5] *= pval
+                            elif pname == "BaseDaylength":
+                                ps["cultivar"][pname][2] = pval
+                                ps["cultivar"][pname][3] = pval
                             else:
                                 pname_arr = pname.split("_")
                                 i = None
@@ -689,14 +692,14 @@ def run_producer(server={"server": None, "port": None}):
 
                         sent_env_count += 1
 
-                        with open(config["path_to_out"] + "/spot_setup.out", "a") as _:
-                            _.write(f"{datetime.now()} Sending jobs out (producer)\n") 
+                        #with open(config["path_to_out"] + "/spot_setup.out", "a") as _:
+                        #    _.write(f"{datetime.now()} Sending jobs out (producer)\n") 
 
                         socket.send_json(env_template)
                         print("sent env ", sent_env_count, " customId: ", env_template["customId"])
 
-                        with open(config["path_to_out"] + "/spot_setup.out", "a") as _:
-                            _.write(f"{datetime.now()} Ended jobs (producer)\n") 
+                        #with open(config["path_to_out"] + "/spot_setup.out", "a") as _:
+                        #    _.write(f"{datetime.now()} Ended jobs (producer)\n") 
 
                 # END OF THE "FOR" LOOP
                                    

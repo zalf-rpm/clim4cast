@@ -14,6 +14,8 @@ import subprocess as sp
 import sys
 import time
 import uuid
+import pandas as pd
+import seaborn as sns
 
 import calibration_spotpy_setup_MONICA
 
@@ -192,6 +194,9 @@ def run_calibration(server=None, prod_port=None, cons_port=None):
 
     spot_setup = None
     for current_only_nuts3_region_ids in to_be_run_only_nuts3_region_ids:
+        # start timer 
+        start_time = time.time()
+
         nuts3_region_folder_name = "-".join(map(str, current_only_nuts3_region_ids))
         filtered_observations = observations
         if len(current_only_nuts3_region_ids) > 0:
@@ -214,7 +219,7 @@ def run_calibration(server=None, prod_port=None, cons_port=None):
         #kstop = max number of evolution loops before convergence
         #peps = convergence criterion
         #pcento = percent change allowed in kstop loops before convergence
-        sampler.sample(rep, ngs=len(params)*2, peps=0.001, pcento=0.001)
+        sampler.sample(rep, ngs=len(params)*2+1, kstop = 100 , peps=0.0001, pcento=0.0001)
 
         #with open(path_to_out_folder + "/spot_setup.out", "a") as _:
         #    _.write(f"{datetime.now()} sampler starts run-cal\n")
@@ -223,6 +228,11 @@ def run_calibration(server=None, prod_port=None, cons_port=None):
 
         #with open(path_to_out_folder + "/spot_setup.out", "a") as _:
         #    _.write(f"{datetime.now()} sampler ends run-cal\n")
+        # end timer
+        end_time = time.time()
+        time_taken = end_time - start_time
+        if time_taken > 10:
+            print(f"Time taken to calibrate: {time_taken:.2f} seconds")
 
 
         def print_status_final(self, stream):
@@ -287,11 +297,42 @@ def run_calibration(server=None, prod_port=None, cons_port=None):
         fig.savefig(f"{path_to_out_folder}/{nuts3_region_folder_name}_SCEUA_objectivefunctiontrace_MONICA.png", dpi=150)
         plt.close(fig)
 
+        # OW addition
+        # df = pd.read_csv (f"{path_to_out_folder}/{nuts3_region_folder_name}_SCEUA_monica_results.csv")
+        # columns_of_interest = ['like1','parSpecificLeafArea', 'parMaxAssimilationRate', 'parDaylengthRequirement', 'parBaseDaylength', 'parCropSpecificMaxRootingDepth', 'parVernalisationRequirement']
+        # df_selected = df[columns_of_interest]
+        # lowest_like1_values = df_selected.nsmallest(100, 'like1')['like1']
+        # df_lowest_like1 = df_selected[df_selected['like1'].isin(lowest_like1_values)]
+
+        # Drop the 'like1' column from the DataFrame as it's no longer needed for plotting
+        # df_lowest_like1 = df_lowest_like1.drop(columns=['like1'])
+
+        # Drop any non-numeric columns (like 'chain') before creating the pair plot
+        # df_lowest_like1_numeric = df_lowest_like1.select_dtypes(include='number')
+        #fig1 = sns.pairplot(df_lowest_like1_numeric)
+        #fig1.savefig(f"{path_to_out_folder}/{nuts3_region_folder_name}_SCEUA_pair_MONICA.png", dpi=150)
+        # plt.close(fig1.fig)
+
+
+
+        # Plot the percentage differences
+        #fig = plt.figure(1, figsize=(9, 6))
+        #plt.plot(results["like1"], "r+")
+        #plt.ylabel("Percentage Difference (%)")
+        #plt.xlabel("Iteration")
+        #plt.show()
+
+        # Save the plot
+        #fig.savefig(f"{path_to_out_folder}/{nuts3_region_folder_name}_SCEUA_percentage_difference_MONICA.png", dpi=150)
+        #plt.close(fig)
+
+
         del results
     # kill the two channels and the producer and consumer
     for proc in procs:
         proc.terminate()
 
+    
     print("sampler_MONICA.py finished")
 
 if __name__ == "__main__":

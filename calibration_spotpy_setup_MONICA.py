@@ -114,5 +114,187 @@ class spot_setup(object):
     def evaluation(self):
         return self.obs_flat_list
 
+
     def objectivefunction(self, simulation, evaluation):
+        #return spotpy.objectivefunctions.rsr(evaluation, simulation)
         return spotpy.objectivefunctions.rmse(evaluation, simulation)
+        #return calculate_percentage_difference(evaluation, simulation)
+
+
+
+
+def calculate_percentage_difference(evaluation, simulation):
+    """
+    Calculate the absolute percentage difference between observed (evaluation) and simulated values.
+
+    :evaluation: Observed data to compare with simulation data.
+    :type: list
+
+    :simulation: Simulation data to compare with evaluation data.
+    :type: list
+
+    :return: Absolute percentage difference.
+    :rtype: list of floats or np.nan if the lengths do not match
+    """
+    if len(evaluation) == len(simulation) > 0:
+        percentage_differences = []
+        for i in range(len(evaluation)):
+            if evaluation[i] != 0:
+                percentage_difference = abs((evaluation[i] - simulation[i]) / evaluation[i] * 100)
+                percentage_differences.append(percentage_difference)
+            else:
+                percentage_differences.append(np.nan)  # Handle division by zero
+        return percentage_differences
+    else:
+        logging.warning("evaluation and simulation lists do not have the same length.")
+        return np.nan
+
+
+
+def rmse(evaluation, simulation):
+    """
+    Root Mean Squared Error
+
+        .. math::
+
+         RMSE=\\sqrt{\\frac{1}{N}\\sum_{i=1}^{N}(e_{i}-s_{i})^2}
+
+    :evaluation: Observed data to compared with simulation data.
+    :type: list
+
+    :simulation: simulation data to compared with evaluation data
+    :type: list
+
+    :return: Root Mean Squared Error
+    :rtype: float
+    """
+    if len(evaluation) == len(simulation) > 0:
+        return np.sqrt(mse(evaluation, simulation))
+    else:
+        logging.warning("evaluation and simulation lists do not have the same length.")
+        return np.nan
+
+
+
+def calculate_mbe(evaluation, simulation):
+    """
+    Calculate the Mean Bias Error.
+
+    Args:
+    y_true (array-like): True values.
+    y_pred (array-like): Predicted values.
+
+    Returns:
+    float: Mean Bias Error.
+    """
+    if len(evaluation) == len(simulation):
+        obs, sim = np.array(evaluation), np.array(simulation)
+        mbe = np.nanmean(obs - sim)
+    return mbe
+
+def mse(evaluation, simulation):
+    """
+    Mean Squared Error
+
+        .. math::
+
+         MSE=\\frac{1}{N}\\sum_{i=1}^{N}(e_{i}-s_{i})^2
+
+    :evaluation: Observed data to compared with simulation data.
+    :type: list
+
+    :simulation: simulation data to compared with evaluation data
+    :type: list
+
+    :return: Mean Squared Error
+    :rtype: float
+    """
+
+    if len(evaluation) == len(simulation):
+        obs, sim = np.array(evaluation), np.array(simulation)
+        mse = np.nanmean((obs - sim) ** 2)
+        return mse
+    else:
+        #logging.warning(
+        #    "evaluation and simulation lists does not have the same length."
+        #)
+        return np.nan
+
+
+#RB addition
+
+def unbiased_rmse_RB(evaluation, simulation):
+    """
+    Calculate RMSE with prior bias correction.
+
+    Args:
+    y_true (array-like): True values.
+    y_pred (array-like): Predicted values.
+
+    Returns:
+    float: RMSE after bias correction.
+    """
+
+    mbe = calculate_mbe(evaluation, simulation)
+    y_pred_adjusted = simulation - mbe
+    return calculate_rmse(evaluation, y_pred_adjusted)
+
+
+# OW Addition
+
+def unbiased_rmse_OW(evaluation, simulation):
+    """
+    Unbiased Root Mean Squared Error
+
+    :evaluation: Observed data to compared with simulation data.
+    :type: list
+
+    :simulation: simulation data to compared with evaluation data
+    :type: list
+
+    :return: Unbiased Root Mean Squared Error
+    :rtype: float
+    """
+    if len(evaluation) == len(simulation) > 0:
+        mse_value = mse(evaluation, simulation)
+        n = len(evaluation)
+        unbiased_rmse = np.sqrt(mse_value * n / (n - 1))
+        return unbiased_rmse
+    else:
+        #logging.warning("evaluation and simulation lists do not have the same length.")
+        return np.nan
+
+def mse(evaluation, simulation):
+    """
+    Mean Squared Error
+
+        .. math::
+
+         MSE=\\frac{1}{N}\\sum_{i=1}^{N}(e_{i}-s_{i})^2
+
+    :evaluation: Observed data to compared with simulation data.
+    :type: list
+
+    :simulation: simulation data to compared with evaluation data
+    :type: list
+
+    :return: Mean Squared Error
+    :rtype: float
+    """
+
+    if len(evaluation) == len(simulation):
+        obs, sim = np.array(evaluation), np.array(simulation)
+        mse = np.nanmean((obs - sim) ** 2)
+        return mse
+    else:
+        #logging.warning(
+        #    "evaluation and simulation lists does not have the same length."
+        #)
+        return np.nan
+
+
+
+
+
+
+
