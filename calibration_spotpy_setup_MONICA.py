@@ -266,8 +266,11 @@ def unbiased_rmse_RB(evaluation, simulation):
     """
 
     mbe = calculate_mbe(evaluation, simulation)
+    print("      mean bias estimate        =",mbe)
+    #subtract mean bias estimate from simulation. 
+    #This will give bias corrected simulation.
     y_pred_adjusted = simulation - mbe
-    return calculate_rmse(evaluation, y_pred_adjusted)
+    return rmse(evaluation, y_pred_adjusted)
 
 
 
