@@ -292,7 +292,7 @@ def run_calibration(server=None, prod_port=None, cons_port=None):
         #plt.plot(results["like1"],  marker='o')
         plt.plot(results["like1"], "r+")
         plt.show()
-        plt.ylabel("unbiased_RMSE")
+        plt.ylabel("Unbiased RMSE")
         plt.xlabel("Iteration")
         fig.savefig(f"{path_to_out_folder}/{nuts3_region_folder_name}_SCEUA_objectivefunctiontrace_MONICA.png", dpi=150)
         plt.close(fig)
@@ -307,7 +307,7 @@ def run_calibration(server=None, prod_port=None, cons_port=None):
         # Drop the 'like1' column from the DataFrame as it's no longer needed for plotting
         df_lowest_like1 = df_lowest_like1.drop(columns=['like1'])
 
-        Drop any non-numeric columns (like 'chain') before creating the pair plot
+        #Drop any non-numeric columns (like 'chain') before creating the pair plot
         df_lowest_like1_numeric = df_lowest_like1.select_dtypes(include='number')
         fig1 = sns.pairplot(df_lowest_like1_numeric)
         fig1.savefig(f"{path_to_out_folder}/{nuts3_region_folder_name}_SCEUA_pair_MONICA.png", dpi=150)
