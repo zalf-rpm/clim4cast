@@ -44,6 +44,15 @@
 				["Year", "LAST"],
 				["Crop", "FIRST"],
 				["Yield", "LAST"]
+
+			],
+
+			{"while": ["Stage", "=", 1]},[
+				["CM-count", "LAST"],
+				["Year", "LAST"],
+				["Crop", "LAST"],
+				["Pwp|Pwp_S1", [1, 10, "AVG"], "AVG"],
+				["Fc|Fc_S1", [1, 10, "AVG"], "AVG"]
 			]
 		],
 		"events_": [
