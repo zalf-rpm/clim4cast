@@ -87,7 +87,7 @@
   "FrostDehardening":5.05,
   "FrostHardening":0.014,
   "HeatSumIrrigationEnd":1676,
-  "HeatSumIrrigationStart":0,
+  "HeatSumIrrigationStart":400,
   "LT50cultivar":-24,
   "LatestHarvestDoy":-1,
   "LowTemperatureExposure":0.654,
