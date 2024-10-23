@@ -59,7 +59,7 @@
   ],
   "CropHeightP1":6,
   "CropHeightP2":0.5,
-  "CropSpecificMaxRootingDepth":0.9,
+  "CropSpecificMaxRootingDepth":1.0,
   "DaylengthRequirement":[  
     [  
       0,
