@@ -27,14 +27,14 @@
 						  0
 						],
 					"SpecificLeafArea": [
-						0.002,
 						0.0018,
-						0.0017,
 						0.0016,
-						0.0015,
-						0.0015
+						0.0012,
+						0.0010,
+						0.0010,
+						0.0010
 					],
-					"MaxAssimilationRate": 30
+					"MaxAssimilationRate": 40
 				}
 			},
 			"residueParams": ["include-from-file", "crops/residues/wheat.json"]
