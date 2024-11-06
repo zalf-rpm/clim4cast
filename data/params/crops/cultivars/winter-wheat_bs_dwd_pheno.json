@@ -1,6 +1,6 @@
 {
   "CultivarName":"winter wheat",  
-  "WinterCrop": true,
+  "WinterCrop": false,
   "AssimilatePartitioningCoeff":[  
     [  
       0.5,
