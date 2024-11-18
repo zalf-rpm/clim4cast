@@ -72,16 +72,16 @@
     "h"
   ],
   "Description":"",
-  "DroughtStressThreshold": [
+  "DroughtStressThreshold":[  
     1,
     0.9,
     1,
     1,
     0.9,
-    0.8
+    0.5
   ],
   "EndSensitivePhaseHeatStress":[  
-    1220,
+    800,
     "°C d"
   ],
   "FrostDehardening":5.05,
