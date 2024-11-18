@@ -81,13 +81,13 @@
     0.5
   ],
   "EndSensitivePhaseHeatStress":[  
-    800,
+    1220,
     "°C d"
   ],
   "FrostDehardening":5.05,
   "FrostHardening":0.014,
   "HeatSumIrrigationEnd":1676,
-  "HeatSumIrrigationStart":400,
+  "HeatSumIrrigationStart":461,
   "LT50cultivar":-24,
   "LatestHarvestDoy":-1,
   "LowTemperatureExposure":0.654,
