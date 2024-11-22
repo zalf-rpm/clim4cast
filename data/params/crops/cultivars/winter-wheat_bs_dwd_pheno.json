@@ -81,7 +81,7 @@
     0.8
   ],
   "EndSensitivePhaseHeatStress":[  
-    1220,
+    800,
     "°C d"
   ],
   "FrostDehardening":5.05,
