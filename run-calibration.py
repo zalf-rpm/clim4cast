@@ -292,7 +292,7 @@ def run_calibration(server=None, prod_port=None, cons_port=None):
         #plt.plot(results["like1"],  marker='o')
         plt.plot(results["like1"], "r+")
         plt.show()
-        plt.ylabel("RMSE")
+        plt.ylabel("Percentage Difference")
         plt.xlabel("Iteration")
         fig.savefig(f"{path_to_out_folder}/{nuts3_region_folder_name}_SCEUA_objectivefunctiontrace_MONICA.png", dpi=150)
         plt.close(fig)
