@@ -34,7 +34,7 @@
 						0.0010,
 						0.0010
 					],
-					"MaxAssimilationRate": 40
+					"MaxAssimilationRate": 30
 				}
 			},
 			"residueParams": ["include-from-file", "crops/residues/wheat.json"]
