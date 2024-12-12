@@ -1,3 +1,3 @@
 name,position in array,low,high,step,optguess,minbound,maxbound,derived params
-DaylengthRequirement,,17,23,,,,,
-BaseDaylength,,5,9,,,,,
+FieldConditionModifier,,0.5,1,,,,,
+
