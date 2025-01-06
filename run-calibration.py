@@ -168,6 +168,17 @@ def run_calibration(server=None, prod_port=None, cons_port=None):
                 p["derive_function"] = lambda _, _2: eval(row[8])
             params.append(p)
 
+    # read weights
+    weights = {}
+    with open("Weights.csv") as weights_csv:
+        dialect = csv.Sniffer().sniff(weights_csv.read(), delimiters=';,\t')
+        weights_csv.seek(0)
+        reader = csv.reader(weights_csv, dialect)
+        next(reader, None)  # skip the header
+        for row in reader:
+            weights[int(row[2])] = float(row[4])
+    print("weights:", weights)
+
     con_man = common.ConnectionManager()
 
     setups = monica_run_lib.read_sim_setups(config["setups-file"])
@@ -206,7 +217,7 @@ def run_calibration(server=None, prod_port=None, cons_port=None):
         if spot_setup:
             del spot_setup
         spot_setup = calibration_spotpy_setup_MONICA.spot_setup(params, filtered_observations, prod_writer, cons_reader,
-                                                                path_to_out_folder, current_only_nuts3_region_ids)
+                                                                path_to_out_folder, current_only_nuts3_region_ids, weights[current_only_nuts3_region_ids[0]])
 
         rep = int(config["repetitions"]) #initial number was 10
         results = []

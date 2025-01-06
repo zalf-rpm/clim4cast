@@ -1,0 +1,402 @@
+NUTS_ID,NUTS_NAME,region_id,pixel_count,weight
+DEG0P,Wartburgkreis,"20",85,0.00318
+DE21M,Traunstein,"21",46,0.00172
+DE21N,Weilheim-Schongau,"22",2,0.00000
+DE248,Forchheim,"29",9,0.00034
+DE249,"Hof, Landkreis","30",12,0.00045
+DE24A,Kronach,"31",5,0.00019
+DE24B,Kulmbach,"32",8,0.00030
+DE24C,Lichtenfels,"33",30,0.00112
+DE24D,Wunsiedel i. Fichtelgebirge,"34",5,0.00019
+DE251,"Ansbach, Kreisfreie Stadt","35",3,0.00011
+DE252,"Erlangen, Kreisfreie Stadt","36",1,0.00000
+DE253,"Fürth, Kreisfreie Stadt","37",0,0.00000
+DE254,"Nürnberg, Kreisfreie Stadt","38",0,0.00000
+DE255,"Schwabach, Kreisfreie Stadt","39",0,0.00000
+DE256,"Ansbach, Landkreis","40",86,0.00322
+DE257,Erlangen-Höchstadt,"41",5,0.00019
+DE258,"Fürth, Landkreis","42",3,0.00011
+DE259,Nürnberger Land,"43",5,0.00019
+DEG0L,Greiz,"44",101,0.00378
+DEG0M,Altenburger Land,"45",125,0.00468
+DEG0N,"Eisenach, Kreisfreie Stadt","46",12,0.00045
+DE401,"Brandenburg an der Havel, Kreisfreie Stadt","76",1,0.00000
+DE402,"Cottbus, Kreisfreie Stadt","77",1.04619847656783,0.00000
+DE403,"Frankfurt (Oder), Kreisfreie Stadt","78",1.00866438449453,0.00000
+DE404,"Potsdam, Kreisfreie Stadt","79",2,0.00000
+DE405,Barnim,"80",55,0.00206
+DE406,Dahme-Spreewald,"81",16,0.00060
+DE407,Elbe-Elster,"82",32,0.00120
+DE408,Havelland,"83",51,0.00191
+DE733,Hersfeld-Rotenburg,"84",67,0.00251
+DE734,"Kassel, Landkreis","85",158,0.00592
+DE735,Schwalm-Eder-Kreis,"86",246,0.00921
+DE736,Waldeck-Frankenberg,"87",146,0.00547
+DE737,Werra-Meißner-Kreis,"88",105,0.00393
+DE803,"Rostock, Kreisfreie Stadt","89",6,0.00022
+DE804,"Schwerin, Kreisfreie Stadt","90",2,0.00000
+DE80J,Mecklenburgische Seenplatte,"91",677,0.02535
+DE80K,Landkreis Rostock,"92",576,0.02156
+DE933,Harburg,"93",46,0.00172
+DE934,Lüchow-Dannenberg,"94",67,0.00251
+DE935,"Lüneburg, Landkreis","95",79,0.00296
+DE80L,Vorpommern-Rügen,"96",641,0.02400
+DE80M,Nordwestmecklenburg,"97",452,0.01692
+DE80N,Vorpommern-Greifswald,"98",520,0.01947
+DE80O,Ludwigslust-Parchim,"99",302,0.01131
+DE911,"Braunschweig, Kreisfreie Stadt","100",26,0.00097
+DE912,"Salzgitter, Kreisfreie Stadt","101",49,0.00183
+DE913,"Wolfsburg, Kreisfreie Stadt","102",22,0.00082
+DE914,Gifhorn,"103",88,0.00329
+DE916,Goslar,"104",125,0.00468
+DE917,Helmstedt,"105",162,0.00606
+DEA52,"Dortmund, Kreisfreie Stadt","106",11,0.00041
+DEA53,"Hagen, Kreisfreie Stadt","107",4,0.00015
+DEA54,"Hamm, Kreisfreie Stadt","108",29,0.00109
+DEA55,"Herne, Kreisfreie Stadt","109",1,0.00000
+DEA56,Ennepe-Ruhr-Kreis,"110",10,0.00037
+DE936,Osterholz,"111",8,0.00030
+DE937,Rotenburg (Wümme),"112",24,0.00090
+DE938,Heidekreis,"113",19,0.00071
+DE939,Stade,"114",62,0.00232
+DE93A,Uelzen,"115",118,0.00442
+DE93B,Verden,"116",60,0.00225
+DE941,"Delmenhorst, Kreisfreie Stadt","117",1,0.00000
+DE128,Rhein-Neckar-Kreis,"118",80,0.00300
+DE129,"Pforzheim, Stadtkreis","119",1,0.00000
+DE12A,Calw,"120",11,0.00041
+DEF0A,Plön,"121",166,0.00621
+DEF0B,Rendsburg-Eckernförde,"122",186,0.00696
+DEF0C,Schleswig-Flensburg,"123",188,0.00704
+DEF0D,Segeberg,"124",104,0.00389
+DEF0E,Steinburg,"125",77,0.00288
+DEF0F,Stormarn,"126",88,0.00329
+DEG01,"Erfurt, Kreisfreie Stadt","127",37,0.00139
+DEG02,"Gera, Kreisfreie Stadt","128",20,0.00075
+DEA57,Hochsauerlandkreis,"129",34,0.00127
+DEA58,Märkischer Kreis,"130",22,0.00082
+DEA59,Olpe,"131",0,0.00000
+DEA5A,Siegen-Wittgenstein,"132",0,0.00000
+DEA5B,Soest,"133",251,0.00940
+DEA5C,Unna,"134",59,0.00221
+DEB11,"Koblenz, Kreisfreie Stadt","135",6,0.00022
+DEB17,Mayen-Koblenz,"136",104,0.00389
+DEB18,Neuwied,"137",19,0.00071
+DEB1A,Rhein-Lahn-Kreis,"138",81,0.00303
+DE27B,Ostallgäu,"139",16,0.00060
+DE409,Märkisch-Oderland,"140",285,0.01067
+DE40A,Oberhavel,"141",30,0.00112
+DEB1B,Westerwaldkreis,"142",25,0.00094
+DEB1C,Cochem-Zell,"143",30,0.00112
+DEB1D,Rhein-Hunsrück-Kreis,"144",71,0.00266
+DEB21,"Trier, Kreisfreie Stadt","145",0,0.00000
+DEB22,Bernkastel-Wittlich,"146",22,0.00082
+DEB23,Eifelkreis Bitburg-Prüm,"147",94,0.00352
+DEB24,Vulkaneifel,"148",22,0.00082
+DE27C,Unterallgäu,"149",31,0.00116
+DE27D,Donau-Ries,"150",124,0.00464
+DE27E,Oberallgäu,"151",0,0.00000
+DE300,Berlin,"152",1.85024078985663,0.00000
+DEA31,"Bottrop, Kreisfreie Stadt","153",1.26723765246129,0.00000
+DEA32,"Gelsenkirchen, Kreisfreie Stadt","154",0,0.00000
+DEA33,"Münster, Kreisfreie Stadt","155",23,0.00086
+DEA34,Borken,"156",43,0.00161
+DEA35,Coesfeld,"157",131,0.00490
+DEA36,Recklinghausen,"158",10,0.00037
+DEA37,Steinfurt,"159",82,0.00307
+DEA38,Warendorf,"160",202,0.00756
+DEA41,"Bielefeld, Kreisfreie Stadt","161",12,0.00045
+DE40B,Oberspreewald-Lausitz,"162",10,0.00037
+DE40C,Oder-Spree,"163",43,0.00161
+DEB12,Ahrweiler,"164",22,0.00082
+DEB13,Altenkirchen (Westerwald),"165",10,0.00037
+DEB14,Bad Kreuznach,"166",61,0.00228
+DEB25,Trier-Saarburg,"167",35,0.00131
+DEB31,"Frankenthal (Pfalz), Kreisfreie Stadt","168",2,0.00000
+DEB32,"Kaiserslautern, Kreisfreie Stadt","169",1,0.00000
+DEB33,"Landau in der Pfalz, Kreisfreie Stadt","170",2,0.00000
+DEB34,"Ludwigshafen am Rhein, Kreisfreie Stadt","171",3,0.00011
+DEB35,"Mainz, Kreisfreie Stadt","172",8,0.00030
+DEB36,"Neustadt an der Weinstraße, Kreisfreie Stadt","173",1,0.00000
+DEB37,"Pirmasens, Kreisfreie Stadt","174",3,0.00011
+DEB38,"Speyer, Kreisfreie Stadt","175",0,0.00000
+DEB39,"Worms, Kreisfreie Stadt","176",7,0.00026
+DEB3A,"Zweibrücken, Kreisfreie Stadt","177",7,0.00026
+DEB3B,Alzey-Worms,"178",70,0.00262
+DEB3C,Bad Dürkheim,"179",15,0.00056
+DEB3D,Donnersbergkreis,"180",84,0.00314
+DEB3E,Germersheim,"181",21,0.00079
+DEB3F,"Kaiserslautern, Landkreis","182",22,0.00082
+DEB3G,Kusel,"183",32,0.00120
+DEB3H,Südliche Weinstraße,"184",27,0.00101
+DEB3I,Rhein-Pfalz-Kreis,"185",8,0.00030
+DEB3J,Mainz-Bingen,"186",65,0.00243
+DE125,"Heidelberg, Stadtkreis","187",2,0.00000
+DE126,"Mannheim, Stadtkreis","188",5,0.00019
+DE127,Neckar-Odenwald-Kreis,"189",109,0.00408
+DE12B,Enzkreis,"190",44,0.00165
+DEE0D,Stendal,"191",217,0.00812
+DEE0E,Wittenberg,"192",48,0.00180
+DEF01,"Flensburg, Kreisfreie Stadt","193",0,0.00000
+DEF02,"Kiel, Kreisfreie Stadt","194",3,0.00011
+DEF03,"Lübeck, Kreisfreie Stadt","195",11,0.00041
+DEF04,"Neumünster, Kreisfreie Stadt","196",0,0.00000
+DEF05,Dithmarschen,"197",172,0.00644
+DEF06,Herzogtum Lauenburg,"198",154,0.00577
+DE12C,Freudenstadt,"199",28,0.00105
+DE131,"Freiburg im Breisgau, Stadtkreis","200",3,0.00011
+DE132,Breisgau-Hochschwarzwald,"201",27,0.00101
+DE133,Emmendingen,"202",11,0.00041
+DE134,Ortenaukreis,"203",44,0.00165
+DE135,Rottweil,"204",38,0.00142
+DE136,Schwarzwald-Baar-Kreis,"205",24,0.00090
+DE137,Tuttlingen,"206",19,0.00071
+DE946,Ammerland,"207",3,0.00011
+DE947,Aurich,"208",105,0.00393
+DE948,Cloppenburg,"209",57,0.00213
+DE949,Emsland,"210",66,0.00247
+DE214,Altötting,"211",41,0.00153
+DE215,Berchtesgadener Land,"212",0,0.00000
+DEE08,Burgenlandkreis,"213",275,0.01030
+DEE09,Harz,"214",438,0.01640
+DE732,Fulda,"215",68,0.00255
+DEE0A,Mansfeld-Südharz,"216",227,0.00850
+DEE0B,Saalekreis,"217",143,0.00535
+DEE0C,Salzlandkreis,"218",286,0.01071
+DE216,Bad Tölz-Wolfratshausen,"219",0,0.00000
+DE217,Dachau,"220",94,0.00352
+DE218,Ebersberg,"221",27,0.00101
+DE219,Eichstätt,"222",136,0.00509
+DE21A,Erding,"223",99,0.00371
+DE21K,"Rosenheim, Landkreis","224",17,0.00064
+DE21L,Starnberg,"225",9,0.00034
+DE21B,Freising,"226",89,0.00333
+DE21C,Fürstenfeldbruck,"227",53,0.00198
+DE21D,Garmisch-Partenkirchen,"228",0,0.00000
+DE21E,Landsberg am Lech,"229",36,0.00135
+DE21F,Miesbach,"230",0,0.00000
+DE21G,Mühldorf a. Inn,"231",69,0.00258
+DE21H,"München, Landkreis","232",21,0.00079
+DE21I,Neuburg-Schrobenhausen,"233",55,0.00206
+DE21J,Pfaffenhofen a. d. Ilm,"234",53,0.00198
+DE918,Northeim,"235",262,0.00981
+DEF07,Nordfriesland,"236",193,0.00723
+DEF08,Ostholstein,"237",345,0.01292
+DEF09,Pinneberg,"238",26,0.00097
+DE715,Bergstraße,"239",35,0.00131
+DE716,Darmstadt-Dieburg,"240",57,0.00213
+DE717,Groß-Gerau,"241",43,0.00161
+DE718,Hochtaunuskreis,"242",23,0.00086
+DE719,Main-Kinzig-Kreis,"243",73,0.00273
+DE71A,Main-Taunus-Kreis,"244",23,0.00086
+DE71B,Odenwaldkreis,"245",13,0.00049
+DE71C,"Offenbach, Landkreis","246",3,0.00011
+DE71D,Rheingau-Taunus-Kreis,"247",38,0.00142
+DE71E,Wetteraukreis,"248",228,0.00854
+DE721,"Gießen, Landkreis","249",86,0.00322
+DE722,Lahn-Dill-Kreis,"250",15,0.00056
+DE723,Limburg-Weilburg,"251",92,0.00344
+DE724,Marburg-Biedenkopf,"252",93,0.00348
+DE725,Vogelsbergkreis,"253",111,0.00416
+DE731,"Kassel, Kreisfreie Stadt","254",1,0.00000
+DE111,"Stuttgart, Stadtkreis","255",1.08230309227995,0.00000
+DE112,Böblingen,"256",46,0.00172
+DE113,Esslingen,"257",30,0.00112
+DE114,Göppingen,"258",23,0.00086
+DE271,"Augsburg, Kreisfreie Stadt","259",8,0.00030
+DE272,"Kaufbeuren, Kreisfreie Stadt","260",0,0.00000
+DE273,"Kempten (Allgäu), Kreisfreie Stadt","261",0,0.00000
+DE274,"Memmingen, Kreisfreie Stadt","262",0,0.00000
+DE275,Aichach-Friedberg,"263",94,0.00352
+DE276,"Augsburg, Landkreis","264",83,0.00311
+DE277,Dillingen a.d. Donau,"265",87,0.00326
+DE278,Günzburg,"266",47,0.00176
+DE279,Neu-Ulm,"267",13,0.00049
+DE27A,Lindau (Bodensee),"268",0,0.00000
+DE945,"Wilhelmshaven, Kreisfreie Stadt","269",2,0.00000
+DED21,"Dresden, Kreisfreie Stadt","270",15,0.00056
+DED2C,Bautzen,"271",151,0.00565
+DE94A,Friesland (DE),"272",18,0.00067
+DE94B,Grafschaft Bentheim,"273",7,0.00026
+DE94C,Leer,"274",25,0.00094
+DE94D,"Oldenburg, Landkreis","275",45,0.00168
+DE94E,"Osnabrück, Landkreis","276",147,0.00550
+DE94F,Vechta,"277",64,0.00240
+DE94G,Wesermarsch,"278",6,0.00022
+DEG03,"Jena, Kreisfreie Stadt","279",4,0.00015
+DEG04,"Suhl, Kreisfreie Stadt","280",0,0.00000
+DEG05,"Weimar, Kreisfreie Stadt","281",10,0.00037
+DEA1C,Mettmann,"282",14,0.00052
+DEA42,Gütersloh,"283",31,0.00116
+DEA43,Herford,"284",75,0.00281
+DEA44,Höxter,"285",192,0.00719
+DEA45,Lippe,"286",160,0.00599
+DEA46,Minden-Lübbecke,"287",106,0.00397
+DEA47,Paderborn,"288",115,0.00431
+DEA51,"Bochum, Kreisfreie Stadt","289",5,0.00019
+DEA17,"Oberhausen, Kreisfreie Stadt","290",0,0.00000
+DEA18,"Remscheid, Kreisfreie Stadt","291",0,0.00000
+DEA19,"Solingen, Kreisfreie Stadt","292",0,0.00000
+DEA1A,"Wuppertal, Kreisfreie Stadt","293",1.10248966139191,0.00000
+DEE01,"Dessau-Roßlau, Kreisfreie Stadt","294",0,0.00000
+DEE02,"Halle (Saale), Kreisfreie Stadt","295",2,0.00000
+DEE03,"Magdeburg, Kreisfreie Stadt","296",29,0.00109
+DEE04,Altmarkkreis Salzwedel,"297",117,0.00438
+DEE05,Anhalt-Bitterfeld,"298",103,0.00386
+DEE06,Jerichower Land,"299",71,0.00266
+DEE07,Börde,"300",488,0.01827
+DE942,"Emden, Kreisfreie Stadt","301",8,0.00030
+DE943,"Oldenburg (Oldenburg), Kreisfreie Stadt","302",0,0.00000
+DE944,"Osnabrück, Kreisfreie Stadt","303",4,0.00015
+DE94H,Wittmund,"304",31,0.00116
+DEA1D,Rhein-Kreis Neuss,"305",64,0.00240
+DEA1E,Viersen,"306",20,0.00075
+DEA1F,Wesel,"307",17,0.00064
+DEA22,"Bonn, Kreisfreie Stadt","308",4,0.00015
+DEA23,"Köln, Kreisfreie Stadt","309",16,0.00060
+DEA24,"Leverkusen, Kreisfreie Stadt","310",1,0.00000
+DEA26,Düren,"311",142,0.00532
+DEG0J,Saale-Holzland-Kreis,"312",98,0.00367
+DEG0K,Saale-Orla-Kreis,"313",81,0.00303
+DED52,Leipzig,"314",208,0.00779
+DED53,Nordsachsen,"315",130,0.00487
+DEB3K,Südwestpfalz,"316",29,0.00109
+DEC01,Regionalverband Saarbrücken,"317",8,0.00030
+DEC02,Merzig-Wadern,"318",15,0.00056
+DEC03,Neunkirchen,"319",2,0.00000
+DEC04,Saarlouis,"320",18,0.00067
+DE221,"Landshut, Kreisfreie Stadt","321",3,0.00011
+DE222,"Passau, Kreisfreie Stadt","322",0,0.00000
+DE223,"Straubing, Kreisfreie Stadt","323",10,0.00037
+DE224,Deggendorf,"324",83,0.00311
+DE225,Freyung-Grafenau,"325",0,0.00000
+DE226,Kelheim,"326",71,0.00266
+DE227,"Landshut, Landkreis","327",179,0.00670
+DE228,"Passau, Landkreis","328",96,0.00359
+DE229,Regen,"329",0,0.00000
+DED2D,Görlitz,"330",149,0.00558
+DED2E,Meißen,"331",164,0.00614
+DED2F,Sächsische Schweiz-Osterzgebirge,"332",115,0.00431
+DED41,"Chemnitz, Kreisfreie Stadt","333",11,0.00041
+DED42,Erzgebirgskreis,"334",18,0.00067
+DE138,Konstanz,"335",37,0.00139
+DE139,Lörrach,"336",11,0.00041
+DE22A,Rottal-Inn,"337",128,0.00479
+DE25A,Neustadt a. d. Aisch-Bad Windsheim,"338",102,0.00382
+DE25B,Roth,"339",24,0.00090
+DED43,Mittelsachsen,"340",292,0.01093
+DED44,Vogtlandkreis,"341",44,0.00165
+DED45,Zwickau,"342",102,0.00382
+DED51,"Leipzig, Kreisfreie Stadt","343",9,0.00034
+DE247,"Coburg, Landkreis","344",52,0.00195
+DE25C,Weißenburg-Gunzenhausen,"345",38,0.00142
+DE261,"Aschaffenburg, Kreisfreie Stadt","346",0,0.00000
+DE262,"Schweinfurt, Kreisfreie Stadt","347",3,0.00011
+DE263,"Würzburg, Kreisfreie Stadt","348",4,0.00015
+DE264,"Aschaffenburg, Landkreis","349",10,0.00037
+DE265,Bad Kissingen,"350",66,0.00247
+DE266,Rhön-Grabfeld,"351",118,0.00442
+DE267,Haßberge,"352",100,0.00374
+DE268,Kitzingen,"353",93,0.00348
+DE269,Miltenberg,"354",20,0.00075
+DE26A,Main-Spessart,"355",94,0.00352
+DE26B,"Schweinfurt, Landkreis","356",167,0.00625
+DE26C,"Würzburg, Landkreis","357",173,0.00648
+DE91A,Peine,"358",116,0.00434
+DE91B,Wolfenbüttel,"359",264,0.00988
+DE91C,Göttingen,"360",258,0.00966
+DE922,Diepholz,"361",183,0.00685
+DE923,Hameln-Pyrmont,"362",150,0.00562
+DE925,Hildesheim,"363",347,0.01299
+DE926,Holzminden,"364",73,0.00273
+DE927,Nienburg (Weser),"365",125,0.00468
+DE928,Schaumburg,"366",137,0.00513
+DE929,Region Hannover,"367",284,0.01063
+DE931,Celle,"368",25,0.00094
+DE932,Cuxhaven,"369",81,0.00303
+DEB15,Birkenfeld,"370",13,0.00049
+DE13A,Waldshut,"371",26,0.00097
+DE141,Reutlingen,"372",19,0.00071
+DE142,"Tübingen, Landkreis","373",34,0.00127
+DE143,Zollernalbkreis,"374",27,0.00101
+DE144,"Ulm, Stadtkreis","375",5,0.00019
+DE145,Alb-Donau-Kreis,"376",98,0.00367
+DE146,Biberach,"377",72,0.00270
+DE147,Bodenseekreis,"378",13,0.00049
+DE148,Ravensburg,"379",20,0.00075
+DE149,Sigmaringen,"380",72,0.00270
+DE211,"Ingolstadt, Kreisfreie Stadt","381",10,0.00037
+DE212,"München, Kreisfreie Stadt","382",2,0.00000
+DE213,"Rosenheim, Kreisfreie Stadt","383",1.19937198340512,0.00000
+DE119,Hohenlohekreis,"384",90,0.00337
+DE11A,Schwäbisch Hall,"385",127,0.00475
+DE234,Amberg-Sulzbach,"386",17,0.00064
+DE235,Cham,"387",24,0.00090
+DE115,Ludwigsburg,"388",74,0.00277
+DE116,Rems-Murr-Kreis,"389",27,0.00101
+DE117,"Heilbronn, Stadtkreis","390",4,0.00015
+DE118,"Heilbronn, Landkreis","391",122,0.00457
+DEA27,Rhein-Erft-Kreis,"392",113,0.00423
+DE40D,Ostprignitz-Ruppin,"393",57,0.00213
+DE40E,Potsdam-Mittelmark,"394",39,0.00146
+DE40F,Prignitz,"395",131,0.00490
+DE40G,Spree-Neiße,"396",22,0.00082
+DE40H,Teltow-Fläming,"397",29,0.00109
+DE40I,Uckermark,"398",466,0.01745
+DE501,"Bremen, Kreisfreie Stadt","399",2,0.00000
+DE502,"Bremerhaven, Kreisfreie Stadt","400",0,0.00000
+DE600,Hamburg,"401",13,0.00049
+DE711,"Darmstadt, Kreisfreie Stadt","402",2,0.00000
+DE712,"Frankfurt am Main, Kreisfreie Stadt","403",17,0.00064
+DE713,"Offenbach am Main, Kreisfreie Stadt","404",1,0.00000
+DE714,"Wiesbaden, Kreisfreie Stadt","405",11,0.00041
+DEA28,Euskirchen,"406",60,0.00225
+DEA29,Heinsberg,"407",95,0.00356
+DEA2A,Oberbergischer Kreis,"408",1,0.00000
+DEA2B,Rheinisch-Bergischer Kreis,"409",1,0.00000
+DEA2C,Rhein-Sieg-Kreis,"410",63,0.00236
+DEA2D,Städteregion Aachen,"411",40,0.00150
+DE11B,Main-Tauber-Kreis,"412",148,0.00554
+DE11C,Heidenheim,"413",7,0.00026
+DE11D,Ostalbkreis,"414",48,0.00180
+DE121,"Baden-Baden, Stadtkreis","415",2,0.00000
+DE122,"Karlsruhe, Stadtkreis","416",2,0.00000
+DE236,Neumarkt i. d. OPf.,"417",60,0.00225
+DEG06,Eichsfeld,"418",169,0.00633
+DEG07,Nordhausen,"419",152,0.00569
+DEG09,Unstrut-Hainich-Kreis,"420",277,0.01037
+DEG0A,Kyffhäuserkreis,"421",230,0.00861
+DE123,"Karlsruhe, Landkreis","422",69,0.00258
+DE124,Rastatt,"423",11,0.00041
+DE22B,Straubing-Bogen,"424",157,0.00588
+DE22C,Dingolfing-Landau,"425",147,0.00550
+DE231,"Amberg, Kreisfreie Stadt","426",2,0.00000
+DE232,"Regensburg, Kreisfreie Stadt","427",5,0.00019
+DE233,"Weiden i. d. Opf, Kreisfreie Stadt","428",1.06364804159098,0.00000
+DE237,Neustadt a. d. Waldnaab,"429",18,0.00067
+DE238,"Regensburg, Landkreis","430",136,0.00509
+DE239,Schwandorf,"431",16,0.00060
+DE23A,Tirschenreuth,"432",13,0.00049
+DE241,"Bamberg, Kreisfreie Stadt","433",0,0.00000
+DE242,"Bayreuth, Kreisfreie Stadt","434",0,0.00000
+DE243,"Coburg, Kreisfreie Stadt","435",1,0.00000
+DE244,"Hof, Kreisfreie Stadt","436",0,0.00000
+DE245,"Bamberg, Landkreis","437",31,0.00116
+DE246,"Bayreuth, Landkreis","438",10,0.00037
+DEA11,"Düsseldorf, Kreisfreie Stadt","439",4,0.00015
+DEA12,"Duisburg, Kreisfreie Stadt","440",0,0.00000
+DEA13,"Essen, Kreisfreie Stadt","441",4,0.00015
+DEA14,"Krefeld, Kreisfreie Stadt","442",3,0.00011
+DEA15,"Mönchengladbach, Kreisfreie Stadt","443",13,0.00049
+DEA16,"Mülheim an der Ruhr, Kreisfreie Stadt","444",4,0.00015
+DEA1B,Kleve,"445",56,0.00210
+DEG0B,Schmalkalden-Meiningen,"446",48,0.00180
+DEG0C,Gotha,"447",161,0.00603
+DEG0D,Sömmerda,"448",193,0.00723
+DEG0E,Hildburghausen,"449",49,0.00183
+DEG0F,Ilm-Kreis,"450",77,0.00288
+DEG0G,Weimarer Land,"451",162,0.00606
+DEG0H,Sonneberg,"452",5,0.00019
+DEG0I,Saalfeld-Rudolstadt,"453",30,0.00112
+DEC05,Saarpfalz-Kreis,"454",9,0.00034
+DEC06,St. Wendel,"455",15,0.00056

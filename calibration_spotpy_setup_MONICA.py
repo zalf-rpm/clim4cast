@@ -32,7 +32,7 @@ abs_imports = [str(PATH_TO_CAPNP_SCHEMAS)]
 fbp_capnp = capnp.load(str(PATH_TO_CAPNP_SCHEMAS / "fbp.capnp"), imports=abs_imports)
 
 class spot_setup(object):
-    def __init__(self, user_params, observations, prod_writer, cons_reader, path_to_out, only_nuts3_region_ids):
+    def __init__(self, user_params, observations, prod_writer, cons_reader, path_to_out, only_nuts3_region_ids, weight_per_region):
         self.user_params = user_params
         self.params = []
         self.observations = observations
@@ -41,6 +41,7 @@ class spot_setup(object):
         self.cons_reader = cons_reader
         self.path_to_out_file = path_to_out + "/spot_setup.out"
         self.only_nuts3_region_ids = only_nuts3_region_ids
+        self.weight_per_region = weight_per_region
 
         if not os.path.exists(path_to_out):
             try:
@@ -116,10 +117,56 @@ class spot_setup(object):
 
 
     def objectivefunction(self, simulation, evaluation):
+
         #return unbiased_rmse_RB(evaluation, simulation)
         return spotpy.objectivefunctions.rmse(evaluation, simulation)
         #return calculate_percentage_difference_new(evaluation, simulation)
+        return calculate_weighted_rmse(evaluation, simulation, self.weight_per_region)
 
+
+
+def calculate_weighted_rmse(evaluation, simulation, weight_per_region):
+    """
+    Calculate the weighted RMSE (Root Mean Squared Error).
+
+    .. math::
+
+        RMSE_weighted = \\sqrt{\\frac{\\sum_{i=1}^N w_i * (sim_i - obs_i)^2}{\\sum_{i=1}^N w_i}}
+
+        w_i = \\frac{pixels_i}{\\sum pixels}
+
+    :param evaluation: Observed data to compare with simulation data.
+    :type evaluation: list or numpy array of numeric values
+
+    :param simulation: Simulated data to compare with evaluation data.
+    :type simulation: list or numpy array of numeric values
+
+    :param pixels: Number of pixels in each region.
+    :type pixels: list or numpy array of numeric values
+
+    :return: Weighted RMSE
+    :rtype: float
+    """
+
+
+    if len(evaluation) == len(simulation):
+        obs = np.array(evaluation)
+        sim = np.array(simulation)
+        #pixels_array = np.array(pixels) It's used for weights calculation and they're already stored in the csv file
+        
+        # Calculate weights
+        #weights = pixels_array / np.sum(pixels_array)
+        
+        # Weighted squared differences
+        weighted_squared_diff = weight_per_region * (sim - obs) ** 2
+        
+        # Weighted RMSE calculation
+        weighted_rmse = np.sqrt(np.nansum(weighted_squared_diff) / np.nansum(weight_per_region))
+        
+        return weighted_rmse
+    else:
+        logging.warning("evaluation, simulation, and pixels must have the same non-zero length.")
+        return np.nan
 
 
 
