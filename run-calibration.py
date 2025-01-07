@@ -177,7 +177,7 @@ def run_calibration(server=None, prod_port=None, cons_port=None):
         next(reader, None)  # skip the header
         for row in reader:
             weights[int(row[2])] = float(row[4])
-    print("weights:", weights)
+    #print("weights:", weights)
 
     con_man = common.ConnectionManager()
 
@@ -216,7 +216,7 @@ def run_calibration(server=None, prod_port=None, cons_port=None):
                 continue
         if spot_setup:
             del spot_setup
-        print("selected weight for region:", weights[current_only_nuts3_region_ids[0]])
+        #print("selected weight for region:", weights[current_only_nuts3_region_ids[0]])
         spot_setup = calibration_spotpy_setup_MONICA.spot_setup(params, filtered_observations, prod_writer, cons_reader,
                                                                 path_to_out_folder, current_only_nuts3_region_ids, weights[current_only_nuts3_region_ids[0]])
 
@@ -304,26 +304,26 @@ def run_calibration(server=None, prod_port=None, cons_port=None):
         #plt.plot(results["like1"],  marker='o')
         plt.plot(results["like1"], "r+")
         plt.show()
-        plt.ylabel("Percentage Difference")
+        plt.ylabel("Weighted RMSE")
         plt.xlabel("Iteration")
         fig.savefig(f"{path_to_out_folder}/{nuts3_region_folder_name}_SCEUA_objectivefunctiontrace_MONICA.png", dpi=150)
         plt.close(fig)
 
         # OW addition
-        df = pd.read_csv (f"{path_to_out_folder}/{nuts3_region_folder_name}_SCEUA_monica_results.csv")
-        columns_of_interest = ['like1','parSpecificLeafArea', 'parMaxAssimilationRate', 'parDaylengthRequirement', 'parBaseDaylength', 'parCropSpecificMaxRootingDepth']
-        df_selected = df[columns_of_interest]
-        lowest_like1_values = df_selected.nsmallest(100, 'like1')['like1']
-        df_lowest_like1 = df_selected[df_selected['like1'].isin(lowest_like1_values)]
+        #df = pd.read_csv (f"{path_to_out_folder}/{nuts3_region_folder_name}_SCEUA_monica_results.csv")
+        #columns_of_interest = ['like1','parSpecificLeafArea', 'parMaxAssimilationRate', 'parDaylengthRequirement', 'parBaseDaylength', 'parCropSpecificMaxRootingDepth']
+        #df_selected = df[columns_of_interest]
+        #lowest_like1_values = df_selected.nsmallest(100, 'like1')['like1']
+        #df_lowest_like1 = df_selected[df_selected['like1'].isin(lowest_like1_values)]
 
         # Drop the 'like1' column from the DataFrame as it's no longer needed for plotting
-        df_lowest_like1 = df_lowest_like1.drop(columns=['like1'])
+        #df_lowest_like1 = df_lowest_like1.drop(columns=['like1'])
 
         #Drop any non-numeric columns (like 'chain') before creating the pair plot
-        df_lowest_like1_numeric = df_lowest_like1.select_dtypes(include='number')
-        fig1 = sns.pairplot(df_lowest_like1_numeric)
-        fig1.savefig(f"{path_to_out_folder}/{nuts3_region_folder_name}_SCEUA_pair_MONICA.png", dpi=150)
-        plt.close(fig1.fig)
+        #df_lowest_like1_numeric = df_lowest_like1.select_dtypes(include='number')
+        #fig1 = sns.pairplot(df_lowest_like1_numeric)
+        #fig1.savefig(f"{path_to_out_folder}/{nuts3_region_folder_name}_SCEUA_pair_MONICA.png", dpi=150)
+        #plt.close(fig1.fig)
 
 
 
