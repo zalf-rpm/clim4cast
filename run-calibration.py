@@ -177,7 +177,7 @@ def run_calibration(server=None, prod_port=None, cons_port=None):
         next(reader, None)  # skip the header
         for row in reader:
             weights[int(row[2])] = float(row[4])
-    #print("weights:", weights)
+    print("weights:", weights)
 
     con_man = common.ConnectionManager()
 
