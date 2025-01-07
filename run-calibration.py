@@ -177,7 +177,7 @@ def run_calibration(server=None, prod_port=None, cons_port=None):
         next(reader, None)  # skip the header
         for row in reader:
             weights[int(row[2])] = float(row[4])
-    print("weights:", weights)
+    #print("weights:", weights)
 
     con_man = common.ConnectionManager()
 
@@ -216,6 +216,7 @@ def run_calibration(server=None, prod_port=None, cons_port=None):
                 continue
         if spot_setup:
             del spot_setup
+        print("selected weight for region:", weights[current_only_nuts3_region_ids[0]])
         spot_setup = calibration_spotpy_setup_MONICA.spot_setup(params, filtered_observations, prod_writer, cons_reader,
                                                                 path_to_out_folder, current_only_nuts3_region_ids, weights[current_only_nuts3_region_ids[0]])
 
