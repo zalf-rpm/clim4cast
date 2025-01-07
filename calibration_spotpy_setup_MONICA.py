@@ -161,7 +161,7 @@ def calculate_weighted_rmse(evaluation, simulation, weight_per_region):
         weighted_squared_diff = weight_per_region * (sim - obs) ** 2
         
         # Weighted RMSE calculation
-        weighted_rmse = np.sqrt(np.nansum(weighted_squared_diff) / np.nansum(weight_per_region))
+        weighted_rmse = np.sqrt(np.nansum(weighted_squared_diff) / 1)
         
         return weighted_rmse
     else:
