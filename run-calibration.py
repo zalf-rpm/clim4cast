@@ -216,7 +216,7 @@ def run_calibration(server=None, prod_port=None, cons_port=None):
                 continue
         if spot_setup:
             del spot_setup
-        print("selected weight for region:", weights[current_only_nuts3_region_ids[0]], flush=True)
+        #print("selected weight for region:", weights[current_only_nuts3_region_ids[0]], flush=True)
         spot_setup = calibration_spotpy_setup_MONICA.spot_setup(params, filtered_observations, prod_writer, cons_reader,
                                                                 path_to_out_folder, current_only_nuts3_region_ids, weights[current_only_nuts3_region_ids[0]])
 
@@ -304,7 +304,7 @@ def run_calibration(server=None, prod_port=None, cons_port=None):
         #plt.plot(results["like1"],  marker='o')
         plt.plot(results["like1"], "r+")
         plt.show()
-        plt.ylabel("Percentage difference")
+        plt.ylabel("RMSE")
         plt.xlabel("Iteration")
         fig.savefig(f"{path_to_out_folder}/{nuts3_region_folder_name}_SCEUA_objectivefunctiontrace_MONICA.png", dpi=150)
         plt.close(fig)
