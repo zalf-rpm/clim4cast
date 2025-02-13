@@ -63,9 +63,9 @@
   "DaylengthRequirement":[  
     [  
       0,
-      18.0,
-      18.0,
-      18.0,
+      19.0,
+      19.0,
+      19.0,
       0,
       0
     ],
@@ -91,7 +91,7 @@
   "LT50cultivar":-24,
   "LatestHarvestDoy":-1,
   "LowTemperatureExposure":0.654,
-  "MaxAssimilationRate":34,
+  "MaxAssimilationRate":35,
   "MaxCropHeight":[  
     0.83,
     "m"
