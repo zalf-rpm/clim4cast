@@ -815,16 +815,16 @@ def run_producer(server={"server": None, "port": None}, shared_id=None):
                     debug_write_folder = paths["path-debug-write-folder"]
                     if not os.path.exists(debug_write_folder):
                         os.makedirs(debug_write_folder)
-                    if sent_env_count < DEBUG_ROWS:
+                    #if sent_env_count < DEBUG_ROWS:
 
-                        path_to_debug_file = debug_write_folder + "/row_" + str(sent_env_count - 1) + "_" + str(
-                            setup_id) + ".json"
+                    path_to_debug_file = debug_write_folder + "/row_" + str(sent_env_count - 1) + "_" + str(
+                        setup_id) + ".json"
 
-                        if not os.path.isfile(path_to_debug_file):
-                            with open(path_to_debug_file, "w") as _:
-                                _.write(json.dumps(env_template))
-                        else:
-                            print("WARNING: Row ", (sent_env_count - 1), " already exists")
+                    if not os.path.isfile(path_to_debug_file):
+                        with open(path_to_debug_file, "w") as _:
+                            _.write(json.dumps(env_template))
+                    else:
+                        print("WARNING: Row ", (sent_env_count - 1), " already exists")
             # print("unknown_soil_ids:", unknown_soil_ids)
 
         if env_template and is_sensitivity_analysis:
