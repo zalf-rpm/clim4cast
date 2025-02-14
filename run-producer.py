@@ -105,7 +105,7 @@ TEMPLATE_PATH_CLIMATE_CSV = "{gcm}/{rcm}/{scenario}/{ensmem}/{version}/row-{crow
 #TEMPLATE_PATH_CLIMATE_CSV = "{gcm}/{rcm}/{scenario}/{ensmem}/{version}/{crow}/daily_mean_RES1_C{ccol}R{crow}.csv.gz"
 
 # Additional data for masking the regions
-NUTS3_REGIONS = "data/germany/NUTS_RG_03M_25832.shp"
+NUTS3_REGIONS = "data/germany/Grouped.shp"
 
 TEMPLATE_PATH_HARVEST = "{path_to_data_dir}/projects/monica-germany/ILR_SEED_HARVEST_doys_{crop_id}.csv"
 
@@ -257,7 +257,7 @@ def run_producer(server={"server": None, "port": None}, shared_id=None):
 
     def create_mask_from_shapefile(NUTS3_REGIONS, region_name, path_to_soil_grid):
         regions_df = gpd.read_file(NUTS3_REGIONS)
-        region = regions_df[regions_df["NUTS_NAME"] == region_name]
+        region = regions_df[regions_df["NUTS_CODE"] == region_name]
 
         # This is needed to read the transformation data correctly from the file. With the original opening it does not work
         with rasterio.open(path_to_soil_grid) as dataset:
