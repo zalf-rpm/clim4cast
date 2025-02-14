@@ -112,7 +112,7 @@ TEMPLATE_PATH_HARVEST = "{path_to_data_dir}/projects/monica-germany/ILR_SEED_HAR
 gdf = gpd.read_file(NUTS3_REGIONS)
 
 DEBUG_DONOT_SEND = False
-DEBUG_WRITE = False
+DEBUG_WRITE = True
 DEBUG_ROWS = 10
 DEBUG_WRITE_FOLDER = "./debug_out"
 DEBUG_WRITE_CLIMATE = False
