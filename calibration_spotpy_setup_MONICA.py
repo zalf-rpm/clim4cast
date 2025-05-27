@@ -32,7 +32,7 @@ abs_imports = [str(PATH_TO_CAPNP_SCHEMAS)]
 fbp_capnp = capnp.load(str(PATH_TO_CAPNP_SCHEMAS / "fbp.capnp"), imports=abs_imports)
 
 class spot_setup(object):
-    def __init__(self, user_params, observations, prod_writer, cons_reader, path_to_out, only_nuts3_region_ids, weight_per_region):
+    def __init__(self, user_params, observations, prod_writer, cons_reader, path_to_out, only_nuts3_region_ids):
         self.user_params = user_params
         self.params = []
         self.observations = observations
@@ -41,7 +41,7 @@ class spot_setup(object):
         self.cons_reader = cons_reader
         self.path_to_out_file = path_to_out + "/spot_setup.out"
         self.only_nuts3_region_ids = only_nuts3_region_ids
-        self.weight_per_region = weight_per_region
+
 
         if not os.path.exists(path_to_out):
             try:
