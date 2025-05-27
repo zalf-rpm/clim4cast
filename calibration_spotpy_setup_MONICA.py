@@ -119,9 +119,9 @@ class spot_setup(object):
     def objectivefunction(self, simulation, evaluation):
 
         #return unbiased_rmse_RB(evaluation, simulation)
-        #return spotpy.objectivefunctions.rmse(evaluation, simulation)
+        return spotpy.objectivefunctions.rmse(evaluation, simulation)
         #return calculate_percentage_difference_new(evaluation, simulation)
-        return calculate_weighted_rmse(evaluation, simulation, self.weight_per_region)
+        #return calculate_weighted_rmse(evaluation, simulation, self.weight_per_region)
 
 
 
