@@ -217,11 +217,11 @@ def run_calibration(server=None, prod_port=None, cons_port=None):
         if spot_setup:
             del spot_setup
         #print("selected weight for region:", weights[current_only_nuts3_region_ids[0]], flush=True)
-        spot_setup = calibration_spotpy_setup_MONICA.spot_setup(params, filtered_observations, prod_writer, cons_reader,
-                                                                path_to_out_folder, current_only_nuts3_region_ids)
-        
         #spot_setup = calibration_spotpy_setup_MONICA.spot_setup(params, filtered_observations, prod_writer, cons_reader,
-                                                        #path_to_out_folder, current_only_nuts3_region_ids, weights[current_only_nuts3_region_ids[0]])
+                                                                #path_to_out_folder, current_only_nuts3_region_ids)
+        
+        spot_setup = calibration_spotpy_setup_MONICA.spot_setup(params, filtered_observations, prod_writer, cons_reader,
+                                                        path_to_out_folder, current_only_nuts3_region_ids, weights[current_only_nuts3_region_ids[0]])
 
         rep = int(config["repetitions"]) #initial number was 10
         results = []
