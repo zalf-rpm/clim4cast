@@ -169,15 +169,15 @@ def run_calibration(server=None, prod_port=None, cons_port=None):
             params.append(p)
 
     # read weights
-    #weights = {}
-    #with open("Weights.csv") as weights_csv:
-        #dialect = csv.Sniffer().sniff(weights_csv.read(), delimiters=';,\t')
-        #weights_csv.seek(0)
-        #reader = csv.reader(weights_csv, dialect)
-        #next(reader, None)  # skip the header
-        #for row in reader:
-            #weights[int(row[2])] = float(row[4])
-    #print("weights:", weights)
+    weights = {}
+    with open("Weights.csv") as weights_csv:
+        dialect = csv.Sniffer().sniff(weights_csv.read(), delimiters=';,\t')
+        weights_csv.seek(0)
+        reader = csv.reader(weights_csv, dialect)
+        next(reader, None)  # skip the header
+        for row in reader:
+            weights[int(row[2])] = float(row[4])
+    print("weights:", weights)
 
     con_man = common.ConnectionManager()
 
