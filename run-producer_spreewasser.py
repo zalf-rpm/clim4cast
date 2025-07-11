@@ -82,10 +82,12 @@ DATA_GRID_SOIL = "germany/buek200_1000_25832_etrs89-utm32n.asc"
 DATA_GRID_SOIL_OW = "germany/buek200_1000_25832_etrs89-utm32n_OW.asc"
 DATA_GRID_CROPS = "germany/OWgermany-crop-ww_1000_25832_etrs89-utm32n.asc"  # Added as a cropmap for winter wheat OW
 DATA_GRID_IRRIGATION = "germany/irrigation_1000_25832_etrs89-utm32n_wc_18.asc"
-TEMPLATE_PATH_LATLON = "{path_to_climate_dir}/latlon_to_rowcol_gcfs21.json"
+# TEMPLATE_PATH_LATLON = "{path_to_climate_dir}/latlon_to_rowcol_gcfs21.json"
+TEMPLATE_PATH_LATLON = "{path_to_climate_dir}/latlon_to_rowcol_gcfs22.json"
 # TEMPLATE_PATH_LATLON = "data/latlon_to_rowcol_gcfs21.json"
-# TEMPLATE_PATH_CLIMATE_CSV = "{gcm}/{rcm}/{scenario}/{ensmem}/{version}/row-{crow}/col-{ccol}.csv"
-TEMPLATE_PATH_CLIMATE_CSV = "{gcm}/{rcm}/{scenario}/{ensmem}/{version}/{crow}/daily_mean_RES1_C{ccol}R{crow}.csv.gz"
+# TEMPLATE_PATH_LATLON = "data/latlon_to_rowcol_gcfs22.json"
+TEMPLATE_PATH_CLIMATE_CSV = "{gcm}/{rcm}/{scenario}/{ensmem}/{version}/row-{crow}/col-{ccol}.csv.gz"
+# TEMPLATE_PATH_CLIMATE_CSV = "{gcm}/{rcm}/{scenario}/{ensmem}/{version}/{crow}/daily_mean_RES1_C{ccol}R{crow}.csv.gz"
 
 # Additional data for masking the regions
 NUTS3_REGIONS = "data/germany/NUTS_RG_03M_25832.shp"
