@@ -59,7 +59,7 @@
   ],
   "CropHeightP1":6,
   "CropHeightP2":0.5,
-  "CropSpecificMaxRootingDepth":1.8,
+  "CropSpecificMaxRootingDepth":1.3,
   "DaylengthRequirement":[  
     [  
       0,
@@ -91,7 +91,7 @@
   "LT50cultivar":-24,
   "LatestHarvestDoy":-1,
   "LowTemperatureExposure":0.654,
-  "MaxAssimilationRate":26,
+  "MaxAssimilationRate":40,
   "MaxCropHeight":[  
     0.83,
     "m"
@@ -173,12 +173,12 @@
   "RespiratoryStress":0.54,
   "SpecificLeafArea":[  
     [  
-      0.0014,
-      0.0013,
+      0.0018,
+      0.0016,
+      0.0012,
       0.0010,
-      0.0008,
-      0.0008,
-      0.0008
+      0.0010,
+      0.0010
     ],
     "ha kg-1"
   ],
